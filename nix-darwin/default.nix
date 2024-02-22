@@ -17,17 +17,19 @@
   };
 
   system.defaults = {
-    # Network -> Firewall On
+    # Network
     alf = {
+      # Firewall
       globalstate = 1;
       allowsignedenabled = 1;
       allowdownloadsignedenabled = 1;
     };
-    NSGlobalDomain = {
-      # Appearance - Dark Mode
-      AppleInterfaceStyle = "Dark";
-      AppleInterfaceStyleSwitchesAutomatically = false;
-    };
+    # Sound
+    NSGlobalDomain.com.apple.sound.beep.volume = 0.6065307;
+    # Appearance
+    # Dark Mode
+    NSGlobalDomain.AppleInterfaceStyle = "Dark";
+    NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = false;
     # Desktop & Dock
     dock = {
       # Icon size of Dock: 48 pixels
