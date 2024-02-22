@@ -51,6 +51,9 @@
     NSGlobalDomain.InitialKeyRepeat = 14;
 
     # Trackpad
+    # Tracking speed
+    "GlobalPreferences"."com.apple.mouse.scaling" = 2.5;
+    # Tap to click
     NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
   };
 
