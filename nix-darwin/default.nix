@@ -52,7 +52,7 @@
 
     # Trackpad
     # Tracking speed
-    NSGlobalDomain."com.apple.mouse.scaling" = 2.5;
+    ".GlobalPreferences"."com.apple.mouse.scaling" = 2.5;
     # Tap to click
     NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
   };
