@@ -49,13 +49,14 @@
     NSGlobalDomain.KeyRepeat = 1;
     # Delay until repeat
     NSGlobalDomain.InitialKeyRepeat = 14;
+
+    # Trackpad
+    NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
   };
 
   # Touch ID & Password
   security.pam.enableSudoTouchIdAuth = true;
 
-  # system.keyboard.enableKeyMapping = true;
-  # system.keyboard.remapCapsLockToEscape = true;
   # fonts.fontDir.enable = true; # DANGER
   # fonts.fonts = [ (pkgs.nerdfonts.override { fonts = [ "Meslo" ]; }) ];
   # system.defaults = {
