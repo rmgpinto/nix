@@ -7,15 +7,6 @@
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
 
-  programs.zsh.enable = true;
-  environment = {
-    # shells = with pkgs; [ bash zsh ];
-    # loginShell = pkgs.zsh;
-    # systemPackages = [ pkgs.coreutils ];
-    # systemPath = [ "/opt/homebrew/bin" ];
-    # pathsToLink = [ "/Applications" ];
-  };
-
   system.defaults = {
     # Network
     alf = {
@@ -57,6 +48,7 @@
     # Trackpad
     # Tracking speed
     ".GlobalPreferences"."com.apple.mouse.scaling" = 2.5;
+    NSGlobalDomain."com.apple.trackpad.scaling" = 2.5;
     # Tap to click
     trackpad.Clicking = true;
     NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
@@ -71,9 +63,4 @@
 
   # fonts.fontDir.enable = true; # DANGER
   # fonts.fonts = [ (pkgs.nerdfonts.override { fonts = [ "Meslo" ]; }) ];
-  # system.defaults = {
-    # finder.AppleShowAllExtensions = true;
-    # finder._FXShowPosixPathInTitle = true;
-    # NSGlobalDomain.AppleShowAllExtensions = true;
-  # };
 }
