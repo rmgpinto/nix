@@ -56,6 +56,16 @@
     NSGlobalDomain."com.apple.swipescrolldirection" = false;
     # Disable swipe between pages
     NSGlobalDomain.AppleEnableSwipeNavigateWithScrolls = false;
+
+    # Finder
+    # Show all filename extensions
+    NSGlobalDomain.AppleShowAllExtensions = true;
+    # Display full POSIX path as Finder window title
+    finder._FXShowPosixPathInTitle = true;
+    # When performing a search, search the current folder by default
+    finder.FXDefaultSearchScope = "SCcf";
+    # Disable the warning when changing a file extension
+    finder.FXEnableExtensionChangeWarning = false;
   };
 
   # Touch ID & Password
