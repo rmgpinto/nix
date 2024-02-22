@@ -32,7 +32,7 @@
       # Don't show recent applications in Dock
       show-recents = false;
       # Wipe all (default) app icons from the Dock
-      com.apple.dock persistent-apps = [];
+      persistent-apps = [];
     };
   };
 
