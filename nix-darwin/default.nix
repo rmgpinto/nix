@@ -31,8 +31,6 @@
       tilesize = 48;
       # Don't show recent applications in Dock
       show-recents = false;
-      # Wipe all (default) app icons from the Dock
-      persistent-apps = [];
     };
   };
 
