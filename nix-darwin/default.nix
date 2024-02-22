@@ -30,6 +30,8 @@
     # Dark Mode
     NSGlobalDomain.AppleInterfaceStyle = "Dark";
     NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = false;
+    # Control Center
+    menuExtraClock.ShowSeconds = true;
     # Desktop & Dock
     dock = {
       # Icon size of Dock: 48 pixels
