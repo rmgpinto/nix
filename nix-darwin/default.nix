@@ -58,6 +58,8 @@
     NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
     # Scroll direction: Un Natural
     NSGlobalDomain."com.apple.swipescrolldirection" = false;
+    # Disable swipe between pages
+    NSGlobalDomain.AppleEnableSwipeNavigateWithScrolls = false;
   };
 
   # Touch ID & Password
