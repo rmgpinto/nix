@@ -49,6 +49,10 @@
     NSGlobalDomain.KeyRepeat = 1;
     # Delay until repeat
     NSGlobalDomain.InitialKeyRepeat = 14;
+    # Disable spell check
+    NSGlobalDomain.NSAutomaticSpellingCorrectionEnabled = false;
+    # Enable long press
+    NSGlobalDomain.ApplePressAndHoldEnabled = true;
 
     # Trackpad
     # Tracking speed
