@@ -25,7 +25,7 @@
       allowdownloadsignedenabled = 1;
     };
     # Sound
-    NSGlobalDomain.com.apple.sound.beep.volume = 0.6065307;
+    NSGlobalDomain."com.apple.sound.beep.volume" = 0.6065307;
     # Appearance
     # Dark Mode
     NSGlobalDomain.AppleInterfaceStyle = "Dark";
