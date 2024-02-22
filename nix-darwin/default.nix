@@ -54,7 +54,10 @@
     # Tracking speed
     ".GlobalPreferences"."com.apple.mouse.scaling" = 2.5;
     # Tap to click
+    trackpad.Clicking = true;
     NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
+    # Scroll direction: Un Natural
+    NSGlobalDomain."com.apple.swipescrolldirection" = false;
   };
 
   # Touch ID & Password
