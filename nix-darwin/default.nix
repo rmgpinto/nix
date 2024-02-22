@@ -19,7 +19,7 @@
   system.defaults = {
     # Network -> Firewall On
     alf = {
-      globalstate = true;
+      globalstate = 1;
     };
     NSGlobalDomain = {
       # Appearance - Dark Mode
