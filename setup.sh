@@ -7,6 +7,16 @@ GREEN='\033[0;32m'
 echo "${GREEN}Installing nix..."
 if ! command -v nix > /dev/null; then
   curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+  . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+fi
+echo "${GREEN}Done.\n"
+
+echo "${GREEN}Renaming nixos.conf and zshenv files..."
+if [ -f /etc/nix/nixos.conf ]; then
+  sudo mv /etc/nix/nixos.conf /etc/nix/nixos.conf.before-nix-darwin
+fi
+if [ -f /etc/zshenv ]; then
+  sudo mv /etc/zshenv /etc/zshenv.before-nix-darwin
 fi
 echo "${GREEN}Done.\n"
 
