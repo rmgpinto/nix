@@ -11,9 +11,9 @@ if ! command -v nix > /dev/null; then
 fi
 echo "${GREEN}Done.\n"
 
-echo "${GREEN}Renaming nixos.conf and zshenv files..."
-if [ -f /etc/nix/nixos.conf ]; then
-  sudo mv /etc/nix/nixos.conf /etc/nix/nixos.conf.before-nix-darwin
+echo "${GREEN}Renaming nix.conf and zshenv files..."
+if [ -f /etc/nix/nix.conf ]; then
+  sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.before-nix-darwin
 fi
 if [ -f /etc/zshenv ]; then
   sudo mv /etc/zshenv /etc/zshenv.before-nix-darwin
