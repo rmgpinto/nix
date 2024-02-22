@@ -20,6 +20,7 @@
     NSGlobalDomain = {
       # Appearance - Dark Mode
       AppleInterfaceStyle = "Dark";
+      AppleInterfaceStyleSwitchesAutomatically = false;
     };
     # Desktop & Dock
     dock = {
