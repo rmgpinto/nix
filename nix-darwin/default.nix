@@ -44,7 +44,15 @@
       wvous-bl-corner = 1;
       wvous-br-corner = 1;
     };
+    # Keyboard
+    # Key repeat rate
+    NSGlobalDomain.KeyRepeat = 1;
+    # Delay until repeat
+    NSGlobalDomain.InitialKeyRepeat = 14;
   };
+
+  # Touch ID & Password
+  security.pam.enableSudoTouchIdAuth = true;
 
   # system.keyboard.enableKeyMapping = true;
   # system.keyboard.remapCapsLockToEscape = true;
@@ -54,7 +62,5 @@
     # finder.AppleShowAllExtensions = true;
     # finder._FXShowPosixPathInTitle = true;
     # NSGlobalDomain.AppleShowAllExtensions = true;
-    # NSGlobalDomain.InitialKeyRepeat = 14;
-    # NSGlobalDomain.KeyRepeat = 1;
   # };
 }
