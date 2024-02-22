@@ -17,6 +17,10 @@
   };
 
   system.defaults = {
+    # Network -> Firewall On
+    alf = {
+      globalstate = true;
+    };
     NSGlobalDomain = {
       # Appearance - Dark Mode
       AppleInterfaceStyle = "Dark";
@@ -35,11 +39,9 @@
   # system.keyboard.remapCapsLockToEscape = true;
   # fonts.fontDir.enable = true; # DANGER
   # fonts.fonts = [ (pkgs.nerdfonts.override { fonts = [ "Meslo" ]; }) ];
-  # services.nix-daemon.enable = true;
   # system.defaults = {
     # finder.AppleShowAllExtensions = true;
     # finder._FXShowPosixPathInTitle = true;
-    # dock.autohide = false;
     # NSGlobalDomain.AppleShowAllExtensions = true;
     # NSGlobalDomain.InitialKeyRepeat = 14;
     # NSGlobalDomain.KeyRepeat = 1;
