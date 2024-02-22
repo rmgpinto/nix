@@ -20,6 +20,8 @@
     # Network -> Firewall On
     alf = {
       globalstate = 1;
+      allowsignedenabled = 1;
+      allowdownloadsignedenabled = 1;
     };
     NSGlobalDomain = {
       # Appearance - Dark Mode
