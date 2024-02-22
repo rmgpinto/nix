@@ -21,12 +21,12 @@
       # Appearance - Dark Mode
       AppleInterfaceStyle = "Dark";
     };
-    com.apple.screensaver = {
+    screensaver = {
       # Screen Saver
       idleTime = 300;
     };
     # Desktop & Dock
-    com.apple.dock = {
+    dock = {
       # Icon size of Dock: 48 pixels
       tilesize = 48;
       # Don't show recent applications in Dock
