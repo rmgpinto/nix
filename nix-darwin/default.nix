@@ -21,10 +21,6 @@
       # Appearance - Dark Mode
       AppleInterfaceStyle = "Dark";
     };
-    screensaver = {
-      # Screen Saver
-      idleTime = 300;
-    };
     # Desktop & Dock
     dock = {
       # Icon size of Dock: 48 pixels
