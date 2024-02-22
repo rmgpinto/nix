@@ -12,16 +12,20 @@ fi
 echo "${GREEN}Done.\n"
 
 echo "${GREEN}Renaming nix.conf and zshenv files..."
-if [ -f /etc/nix/nix.conf ]; then
-  sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.before-nix-darwin
+if ! test -L /etc/nix/nix.conf; then
+  if test -f /etc/nix/nix.conf; then
+    sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.before-nix-darwin
+  fi
 fi
-if [ -f /etc/zshenv ]; then
-  sudo mv /etc/zshenv /etc/zshenv.before-nix-darwin
+if ! test -L /etc/zshenv; then
+  if test -f /etc/zshenv; then
+    sudo mv /etc/zshenv /etc/zshenv.before-nix-darwin
+  fi
 fi
 echo "${GREEN}Done.\n"
 
 echo "${GREEN}Running nix build..."
-nix build .#darwinConfigurations.macos.system --option sandbox false
+nix build .#darwinConfigurations.macos.system --option sandbox false --experimental-features 'nix-command flakes'
 echo "${GREEN}Done.\n"
 
 echo "${GREEN}Running nix-darwin..."
