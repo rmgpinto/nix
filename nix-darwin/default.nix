@@ -35,9 +35,15 @@
       wvous-tr-corner = 1;
       wvous-bl-corner = 1;
       wvous-br-corner = 1;
+      # Dock apps
+      persistent-apps = [];
     };
-    # # Screen Saver
-    # CustomUserPreferences."com.apple.screensaver" = 300;
+    # Screen Saver
+    CustomUserPreferences = {
+      "com.apple.screensaver" = {
+        idleTime = 300; # not working
+      };
+    };
     # Keyboard
     # Key repeat rate
     NSGlobalDomain.KeyRepeat = 1;
