@@ -76,6 +76,13 @@
     finder.FXEnableExtensionChangeWarning = false;
     # Use icon view in all Finder windows by default
     finder.FXPreferredViewStyle = "icnv";
+
+    # Activity Monitor
+    # Show all processes in Activity Monitor
+    system.defaults.ActivityMonitor.ShowCategory = 100;
+    # Sort Activity Monitor results by CPU usage
+    system.defaults.ActivityMonitor.SortColumn = "CPUUsage";
+    system.defaults.ActivityMonitor.SortDirection = 0;
   };
 
   # Disable startup sound
