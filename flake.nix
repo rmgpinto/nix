@@ -10,11 +10,22 @@
   };
 
   outputs = inputs@{ self, nixpkgs, nix-darwin, ... }:
+    let
+      username = "rmgpinto";
+    in
     {
       darwinConfigurations.macos = nix-darwin.lib.darwinSystem {
         inherit inputs;
         modules = [
           ./nix-darwin
+          # home-manager.darwinModules.home-manager
+          # {
+          #   home-manager = {
+          #     useGlobalPkgs = true;
+          #     useUserPackages = true;
+          #     users.${username}.imports = [ ./home-manager ];
+          #   };
+          # }
         ];
       };
     };
