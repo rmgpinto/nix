@@ -83,6 +83,9 @@
     # Sort Activity Monitor results by CPU usage
     ActivityMonitor.SortColumn = "CPUUsage";
     ActivityMonitor.SortDirection = 0;
+
+    # Screenshots
+    screencapture.location = "~/Screenshots";
   };
 
   # Disable startup sound
