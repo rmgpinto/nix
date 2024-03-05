@@ -46,8 +46,8 @@
       };
     };
     # Ask for password immediately after sleep
-    screensaver.askForPassword = true;
-    screensaver.askForPasswordDelay = 0;
+    screensaver.askForPassword = true; # tbd
+    screensaver.askForPasswordDelay = 0; # tbd
     # Keyboard
     # Key repeat rate
     NSGlobalDomain.KeyRepeat = 1;
@@ -90,6 +90,16 @@
 
     # Screenshots
     screencapture.location = "~/Screenshots";
+
+    # Safari
+    CustomUserPreferences = {
+      "com.apple.Safari" = {
+        IncludeInternalDebugMenu = true;
+        IncludeDevelopMenu = true;
+        WebKitDeveloperExtrasEnabledPreferenceKey = true;
+        "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" = true;
+      };
+    };
   };
 
   # Disable startup sound
