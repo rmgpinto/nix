@@ -36,12 +36,12 @@
       wvous-bl-corner = 1;
       wvous-br-corner = 1;
       # Dock apps
-      persistent-apps = [];
+      persistent-apps = []; # tbd
     };
     # Screen Saver
     CustomUserPreferences = {
       "com.apple.screensaver" = {
-        idleTime = 300; # not working
+        idleTime = 300; # tbd
       };
     };
     # Keyboard
@@ -74,6 +74,8 @@
     finder.FXDefaultSearchScope = "SCcf";
     # Disable the warning when changing a file extension
     finder.FXEnableExtensionChangeWarning = false;
+    # Use icon view in all Finder windows by default
+    finder.FXPreferredViewStyle = "icnv";
   };
 
   # Disable startup sound
