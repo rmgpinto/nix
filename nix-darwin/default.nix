@@ -7,6 +7,7 @@
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
 
+  # System Preferences
   system.defaults = {
     # Network
     alf = {
@@ -35,6 +36,8 @@
       wvous-bl-corner = 1;
       wvous-br-corner = 1;
     };
+    # Screen Saver
+    UserPreferences."com.apple.screensaver" = 300;
     # Keyboard
     # Key repeat rate
     NSGlobalDomain.KeyRepeat = 1;
@@ -44,7 +47,6 @@
     NSGlobalDomain.NSAutomaticSpellingCorrectionEnabled = false;
     # Enable long press
     NSGlobalDomain.ApplePressAndHoldEnabled = true;
-
     # Trackpad
     # Tracking speed
     ".GlobalPreferences"."com.apple.mouse.scaling" = 2.5;
@@ -67,6 +69,9 @@
     # Disable the warning when changing a file extension
     finder.FXEnableExtensionChangeWarning = false;
   };
+
+  # Disable startup sound
+  system.startup.chime = false;
 
   # Touch ID & Password
   security.pam.enableSudoTouchIdAuth = true;
