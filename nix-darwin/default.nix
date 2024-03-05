@@ -79,10 +79,10 @@
 
     # Activity Monitor
     # Show all processes in Activity Monitor
-    system.defaults.ActivityMonitor.ShowCategory = 100;
+    ActivityMonitor.ShowCategory = 100;
     # Sort Activity Monitor results by CPU usage
-    system.defaults.ActivityMonitor.SortColumn = "CPUUsage";
-    system.defaults.ActivityMonitor.SortDirection = 0;
+    ActivityMonitor.SortColumn = "CPUUsage";
+    ActivityMonitor.SortDirection = 0;
   };
 
   # Disable startup sound
