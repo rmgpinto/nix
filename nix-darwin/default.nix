@@ -39,11 +39,15 @@
       persistent-apps = []; # tbd
     };
     # Screen Saver
+    # 5 minutes
     CustomUserPreferences = {
       "com.apple.screensaver" = {
         idleTime = 300; # tbd
       };
     };
+    # Ask for password immediately after sleep
+    screensaver.askForPassword = true;
+    screensaver.askForPasswordDelay = 0;
     # Keyboard
     # Key repeat rate
     NSGlobalDomain.KeyRepeat = 1;
