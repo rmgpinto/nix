@@ -36,8 +36,8 @@
       wvous-bl-corner = 1;
       wvous-br-corner = 1;
     };
-    # Screen Saver
-    CustomUserPreferences."com.apple.screensaver" = 300;
+    # # Screen Saver
+    # CustomUserPreferences."com.apple.screensaver" = 300;
     # Keyboard
     # Key repeat rate
     NSGlobalDomain.KeyRepeat = 1;
