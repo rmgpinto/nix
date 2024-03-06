@@ -127,7 +127,6 @@
       };
       # Safari
       "com.apple.Safari" = {
-        IncludeInternalDebugMenu = true; # tbd
         IncludeDevelopMenu = true; # tbd
         WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
         "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" = true; # tbd
