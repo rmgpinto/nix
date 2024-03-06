@@ -40,11 +40,11 @@
     };
     # Screen Saver
     # 5 minutes
-    CustomSystemPreferences = {
-      "com.apple.screensaver" = {
-        idleTime = 300; # tbd
-      };
-    };
+    # CustomUserPreferences = {
+    #   "com.apple.screensaver" = {
+    #     idleTime = 300; # tbd
+    #   };
+    # };
     # Ask for password immediately after sleep
     screensaver.askForPassword = true; # tbd
     screensaver.askForPasswordDelay = 0; # tbd
@@ -92,13 +92,23 @@
     screencapture.location = "~/Screenshots";
 
     # Safari
-    CustomUserPreferences = {
+    CustomSystemPreferences = {
       "com.apple.Safari" = {
         IncludeInternalDebugMenu = true; # tbd
         IncludeDevelopMenu = true; # tbd
         WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
         "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" = true; # tbd
       };
+    };
+
+    CustomUserPreferences = {
+      "~/Library/Preferences/ByHost/com.apple.controlcenter.plist" = {
+        "Bluetooth" = 18;
+        "Sound" = 16;
+        "BatteryShowPercentage" = 1;
+    };
+      "~/Library/Preferences/ByHost/com.apple.Spotlight.plist" = {
+        "MenuItemHidden" = 1;
     };
   };
 
