@@ -100,6 +100,7 @@
         "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" = true; # tbd
       };
     };
+  };
 
   # Disable startup sound
   system.startup.chime = false;
