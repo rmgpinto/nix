@@ -109,8 +109,8 @@
       };
     };
 
-    # Menu Bar icons
     CustomUserPreferences = {
+      # Menu Bar icons
       "~/Library/Preferences/ByHost/com.apple.controlcenter.plist" = {
         "Bluetooth" = 18;
         "Sound" = 16;
@@ -119,11 +119,15 @@
       "~/Library/Preferences/ByHost/com.apple.Spotlight.plist" = {
         "MenuItemHidden" = 1;
       };
+      # Finder
       "com.apple.finder"  = {
         ShowExternalHardDrivesOnDesktop = false;
         ShowHardDrivesOnDesktop = false;
         ShowMountedServersOnDesktop = false;
         ShowRemovableMediaOnDesktop = false;
+      };
+      "~/Library/Preferences/ByHost/com.apple.screensaver" = {
+        idleTime = 300;
       };
     };
   };
