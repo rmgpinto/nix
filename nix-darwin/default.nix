@@ -93,15 +93,6 @@
     screencapture.location = "~/Screenshots";
 
     CustomSystemPreferences = {
-      # Safari
-      "com.apple.Safari" = {
-        IncludeDevelopMenu = true; # tbd
-        WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
-        AlwaysRestoreSessionAtLaunch = true; # tbd
-        AlwaysShowTabBar = true; # tbd
-        SearchProviderShortName = "DuckDuckGo"; # tbd
-        "ShowFavoritesBar-v2" = true; # tbd
-      };
     };
 
     CustomUserPreferences = {
@@ -132,6 +123,15 @@
       };
       "~/Library/Preferences/ByHost/com.apple.screensaver" = {
         idleTime = 300;
+      };
+      # Safari
+      "com.apple.Safari" = {
+        IncludeDevelopMenu = true; # tbd
+        WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
+        AlwaysRestoreSessionAtLaunch = true; # tbd
+        AlwaysShowTabBar = true; # tbd
+        SearchProviderShortName = "DuckDuckGo"; # tbd
+        "ShowFavoritesBar-v2" = true; # tbd
       };
     };
   };
