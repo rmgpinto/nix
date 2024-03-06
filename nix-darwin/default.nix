@@ -40,7 +40,7 @@
     };
     # Screen Saver
     # 5 minutes
-    CustomUserPreferences = {
+    CustomSystemPreferences = {
       "com.apple.screensaver" = {
         idleTime = 300; # tbd
       };
