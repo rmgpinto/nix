@@ -122,7 +122,7 @@
         ShowRemovableMediaOnDesktop = false;
         ShowRecentTags = false;
         QLEnableTextSelection = true;
-        NewWindowTargetPath = "file:///Users/${inputs.username}";
+        NewWindowTargetPath = "file:///Users/rmgpinto"; # tbd as argument
       };
       "com.apple.desktopservices" = {
         DSDontWriteNetworkStores = true;
