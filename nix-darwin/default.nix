@@ -40,14 +40,7 @@
       # Dock apps
       persistent-apps = []; # tbd
     };
-    # Screen Saver
-    # 5 minutes
-    # CustomUserPreferences = {
-    #   "com.apple.screensaver" = {
-    #     idleTime = 300; # tbd
-    #   };
-    # };
-    # Ask for password immediately after sleep
+    # Ask for wpassword immediately after sleep
     screensaver.askForPassword = true; # tbd
     screensaver.askForPasswordDelay = 0; # tbd
     # Keyboard
@@ -125,6 +118,7 @@
         ShowHardDrivesOnDesktop = false;
         ShowMountedServersOnDesktop = false;
         ShowRemovableMediaOnDesktop = false;
+        ShowRecentTags = false;
       };
       "~/Library/Preferences/ByHost/com.apple.screensaver" = {
         idleTime = 300;
