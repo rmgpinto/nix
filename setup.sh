@@ -5,7 +5,7 @@ set -e
 GREEN='\033[0;32m'
 
 echo "${GREEN}Go to System Preferences -> Privacy & Security -> Full Disk Access and add Terminal.app\n"
-read -p "${GREEN}Press enter to continue"
+read -p "Press enter to continue"
 
 echo "${GREEN}Installing nix..."
 if ! command -v nix > /dev/null; then
