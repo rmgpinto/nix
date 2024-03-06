@@ -92,7 +92,7 @@
     screencapture.location = "~/Screenshots";
 
     # Safari
-    CustomSystemPreferences = CustomSystemPreferences // {
+    CustomUserPreferences = {
       "com.apple.Safari" = {
         IncludeInternalDebugMenu = true; # tbd
         IncludeDevelopMenu = true; # tbd
