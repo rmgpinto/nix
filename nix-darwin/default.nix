@@ -106,9 +106,10 @@
         "Bluetooth" = 18;
         "Sound" = 16;
         "BatteryShowPercentage" = 1;
-    };
+      };
       "~/Library/Preferences/ByHost/com.apple.Spotlight.plist" = {
         "MenuItemHidden" = 1;
+      };
     };
   };
 
