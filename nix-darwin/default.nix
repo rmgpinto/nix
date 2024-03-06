@@ -136,10 +136,10 @@
     CustomUserPreferences."com.apple.Safari" = {
       IncludeDevelopMenu = true; # tbd
       WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
-      AlwaysRestoreSessionAtLaunch = true; # tbd
-      AlwaysShowTabBar = true; # tbd
-      SearchProviderShortName = "DuckDuckGo"; # tbd
-      "ShowFavoritesBar-v2" = true; # tbd
+      AlwaysRestoreSessionAtLaunch = true;
+      AlwaysShowTabBar = true;
+      SearchProviderShortName = "DuckDuckGo";
+      "ShowFavoritesBar-v2" = true;
     };
   };
 
@@ -148,7 +148,4 @@
 
   # Touch ID & Password
   security.pam.enableSudoTouchIdAuth = true;
-
-  # fonts.fontDir.enable = true; # DANGER
-  # fonts.fonts = [ (pkgs.nerdfonts.override { fonts = [ "Meslo" ]; }) ];
 }
