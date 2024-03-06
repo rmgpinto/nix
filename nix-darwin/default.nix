@@ -92,14 +92,14 @@
     screencapture.location = "~/Screenshots";
 
     # Safari
-    CustomSystemPreferences = map(key: items."${key}" // {
+    CustomSystemPreferences = CustomSystemPreferences // {
       "com.apple.Safari" = {
         IncludeInternalDebugMenu = true; # tbd
         IncludeDevelopMenu = true; # tbd
         WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
         "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" = true; # tbd
       };
-    }) (builtins.attrNames items);
+    };
 
   # Disable startup sound
   system.startup.chime = false;
