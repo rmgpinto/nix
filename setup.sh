@@ -27,6 +27,10 @@ if ! test -L /etc/zshenv; then
 fi
 echo "${GREEN}Done.\n"
 
+echo "${GREEN}Running bootstrap commands..."
+mkdir -p ~/Screenshots
+echo "${GREEN}Done.\n"
+
 echo "${GREEN}Running nix build..."
 nix build .#darwinConfigurations.macos.system --option sandbox false --experimental-features 'nix-command flakes'
 echo "${GREEN}Done.\n"
