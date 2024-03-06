@@ -114,11 +114,17 @@
       };
       # Finder
       "com.apple.finder"  = {
+        FXPreferredGroupBy = "Kind";
+        FXArrangeGroupViewBy = "Name";
         ShowExternalHardDrivesOnDesktop = false;
         ShowHardDrivesOnDesktop = false;
         ShowMountedServersOnDesktop = false;
         ShowRemovableMediaOnDesktop = false;
         ShowRecentTags = false;
+        QLEnableTextSelection = true;
+      };
+      "com.apple.desktopservices" = {
+        DSDontWriteNetworkStores = true;
       };
       "~/Library/Preferences/ByHost/com.apple.screensaver" = {
         idleTime = 300;
