@@ -127,9 +127,6 @@
       # Safari
       "com.apple.Safari" = {
         IncludeDevelopMenu = true; # tbd
-        PreferencesModulesMinimumWidths = {
-          DeveloperMenuVisibility = 1;
-        };
         WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
         AlwaysRestoreSessionAtLaunch = true; # tbd
         AlwaysShowTabBar = true; # tbd
