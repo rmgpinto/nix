@@ -23,7 +23,9 @@
     NSGlobalDomain.AppleInterfaceStyle = "Dark";
     NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = false;
     # Control Center
+    # Clock
     menuExtraClock.ShowSeconds = true;
+    menuExtraClock.Show24Hour = true;
     # Desktop & Dock
     dock = {
       # Icon size of Dock: 48 pixels
@@ -101,6 +103,7 @@
       };
     };
 
+    # Menu Bar icons
     CustomUserPreferences = {
       "~/Library/Preferences/ByHost/com.apple.controlcenter.plist" = {
         "Bluetooth" = 18;
