@@ -65,8 +65,8 @@
     # Start after 5 minutes
     CustomUserPreferences."~/Library/Preferences/ByHost/com.apple.screensaver".idleTime = 300;
     # Ask for password immediately after sleep
-    screensaver.askForPassword = true; # tbd
-    screensaver.askForPasswordDelay = 1; # tbd
+    CustomUserPreferences."~/Library/Preferences/ByHost/com.apple.screensaver".askForPassword = true; # tbd
+    CustomUserPreferences."~/Library/Preferences/ByHost/com.apple.screensaver".askForPasswordDelay = 0; # tbd
     # Keyboard
     # Key repeat rate
     NSGlobalDomain.KeyRepeat = 1;
