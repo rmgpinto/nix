@@ -94,12 +94,6 @@
 
     # Safari
     CustomSystemPreferences = {
-      "com.apple.Safari" = {
-        IncludeInternalDebugMenu = true; # tbd
-        IncludeDevelopMenu = true; # tbd
-        WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
-        "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" = true; # tbd
-      };
     };
 
     CustomUserPreferences = {
@@ -126,9 +120,17 @@
       };
       "com.apple.desktopservices" = {
         DSDontWriteNetworkStores = true;
+        DSDontWriteUSBStores = true;
       };
       "~/Library/Preferences/ByHost/com.apple.screensaver" = {
         idleTime = 300;
+      };
+      # Safari
+      "com.apple.Safari" = {
+        IncludeInternalDebugMenu = true; # tbd
+        IncludeDevelopMenu = true; # tbd
+        WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
+        "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" = true; # tbd
       };
     };
   };
