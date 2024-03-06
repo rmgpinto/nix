@@ -4,6 +4,9 @@ set -e
 
 GREEN='\033[0;32m'
 
+echo "${GREEN}Go to System Preferences -> Privacy & Security -> Full Disk Access and add Terminal.app\n"
+read -p "${GREEN}Press enter to continue"
+
 echo "${GREEN}Installing nix..."
 if ! command -v nix > /dev/null; then
   curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
