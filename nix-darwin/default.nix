@@ -133,6 +133,10 @@
         SearchProviderShortName = "DuckDuckGo"; # tbd
         "ShowFavoritesBar-v2" = true; # tbd
       };
+      # Calendar
+      ".GlobalPreferences".AppleFirstWeekday = {
+        gregorian = 2;
+      };
     };
   };
 
