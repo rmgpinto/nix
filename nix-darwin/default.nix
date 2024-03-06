@@ -129,10 +129,10 @@
       "com.apple.Safari" = {
         IncludeDevelopMenu = true; # tbd
         WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
-        AlwaysRestoreSessionAtLaunch = true;
-        AlwaysShowTabBar = true;
-        SearchProviderShortName = "DuckDuckGo";
-        "ShowFavoritesBar-v2" = true;
+        AlwaysRestoreSessionAtLaunch = true; # tbd
+        AlwaysShowTabBar = true; # tbd
+        SearchProviderShortName = "DuckDuckGo"; # tbd
+        "ShowFavoritesBar-v2" = true; # tbd
       };
     };
   };
