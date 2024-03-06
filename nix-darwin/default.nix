@@ -82,6 +82,12 @@
     finder.FXEnableExtensionChangeWarning = false;
     # Use icon view in all Finder windows by default
     finder.FXPreferredViewStyle = "icnv";
+    # Disable icons on Desktop
+    finder.CreateDesktop = false;
+    # Show Path bar
+    finder.ShowPathbar = true;
+    # Show Status bar
+    finder.ShowStatusBar = true;
 
     # Activity Monitor
     # Show all processes in Activity Monitor
