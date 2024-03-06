@@ -107,6 +107,12 @@
         WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
         "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" = true; # tbd
       };
+      "com.apple.finder"  = {
+        ShowExternalHardDrivesOnDesktop = false;
+        ShowHardDrivesOnDesktop = false;
+        ShowMountedServersOnDesktop = false;
+        ShowRemovableMediaOnDesktop = false;
+      };
     };
 
     # Menu Bar icons
