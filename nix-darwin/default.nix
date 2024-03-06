@@ -129,7 +129,10 @@
       "com.apple.Safari" = {
         IncludeDevelopMenu = true; # tbd
         WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
-        "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" = true; # tbd
+        AlwaysRestoreSessionAtLaunch = true;
+        AlwaysShowTabBar = true;
+        SearchProviderShortName = "DuckDuckGo";
+        "ShowFavoritesBar-v2" = true;
       };
     };
   };
