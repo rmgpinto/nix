@@ -27,7 +27,7 @@
     CustomUserPreferences.".GlobalPreferences".AppleFirstWeekday = {
       gregorian = 2;
     };
-    # Number format tbd
+    # Number format
     CustomUserPreferences.".GlobalPreferences".AppleICUNumberSymbols = {
       "0" = ".";
       "1" = ",";
@@ -64,9 +64,9 @@
     # Screen saver
     # Start after 5 minutes
     CustomUserPreferences."~/Library/Preferences/ByHost/com.apple.screensaver".idleTime = 300;
-    # Ask for wpassword immediately after sleep
+    # Ask for password immediately after sleep
     screensaver.askForPassword = true; # tbd
-    screensaver.askForPasswordDelay = 0; # tbd
+    screensaver.askForPasswordDelay = 1; # tbd
     # Keyboard
     # Key repeat rate
     NSGlobalDomain.KeyRepeat = 1;
