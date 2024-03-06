@@ -126,7 +126,7 @@
       };
       # Safari
       "com.apple.Safari" = {
-        IncludeDevelopMenu = true; # tbd
+        DeveloperMenuVisibility = true; # tbd
         WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
         AlwaysRestoreSessionAtLaunch = true; # tbd
         AlwaysShowTabBar = true; # tbd
