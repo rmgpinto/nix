@@ -122,6 +122,7 @@
         ShowRemovableMediaOnDesktop = false;
         ShowRecentTags = false;
         QLEnableTextSelection = true;
+        NewWindowTargetPath = "file:///Users/${inputs.username}";
       };
       "com.apple.desktopservices" = {
         DSDontWriteNetworkStores = true;
