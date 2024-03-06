@@ -22,7 +22,28 @@
     # Dark Mode
     NSGlobalDomain.AppleInterfaceStyle = "Dark";
     NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = false;
+    # Language & Region
+    # First day of Week
+    CustomUserPreferences.".GlobalPreferences".AppleFirstWeekday = {
+      gregorian = 2;
+    };
+    # Number format tbd
+    CustomUserPreferences.".GlobalPreferences".AppleICUNumberSymbols = {
+      "0" = ".";
+      "1" = ",";
+      "10" = ".";
+      "17" = ",";
+    };
     # Control Center
+    # Menu Bar icons
+    CustomUserPreferences."~/Library/Preferences/ByHost/com.apple.controlcenter.plist" = {
+      "Bluetooth" = 18;
+      "Sound" = 16;
+      "BatteryShowPercentage" = 1;
+    };
+    CustomUserPreferences."~/Library/Preferences/ByHost/com.apple.Spotlight.plist" = {
+      "MenuItemHidden" = 1;
+    };
     # Clock
     menuExtraClock.ShowSeconds = true;
     menuExtraClock.Show24Hour = true;
@@ -40,6 +61,9 @@
       # Dock apps
       persistent-apps = []; # tbd
     };
+    # Screen saver
+    # Start after 5 minutes
+    CustomUserPreferences."~/Library/Preferences/ByHost/com.apple.screensaver".idleTime = 300;
     # Ask for wpassword immediately after sleep
     screensaver.askForPassword = true; # tbd
     screensaver.askForPasswordDelay = 0; # tbd
@@ -81,6 +105,22 @@
     finder.ShowPathbar = true;
     # Show Status bar
     finder.ShowStatusBar = true;
+    # Custom settings
+    CustomUserPreferences."com.apple.finder"  = {
+      FXPreferredGroupBy = "Kind";
+      FXArrangeGroupViewBy = "Name";
+      ShowExternalHardDrivesOnDesktop = false;
+      ShowHardDrivesOnDesktop = false;
+      ShowMountedServersOnDesktop = false;
+      ShowRemovableMediaOnDesktop = false;
+      ShowRecentTags = false;
+      QLEnableTextSelection = true;
+      NewWindowTargetPath = "file:///Users/rmgpinto"; # tbd as argument
+    };
+    CustomUserPreferences."com.apple.desktopservices" = {
+      DSDontWriteNetworkStores = true;
+      DSDontWriteUSBStores = true;
+    };
 
     # Activity Monitor
     # Show all processes in Activity Monitor
@@ -92,51 +132,14 @@
     # Screenshots
     screencapture.location = "~/Screenshots";
 
-    CustomSystemPreferences = {
-    };
-
-    CustomUserPreferences = {
-      # Menu Bar icons
-      "~/Library/Preferences/ByHost/com.apple.controlcenter.plist" = {
-        "Bluetooth" = 18;
-        "Sound" = 16;
-        "BatteryShowPercentage" = 1;
-      };
-      "~/Library/Preferences/ByHost/com.apple.Spotlight.plist" = {
-        "MenuItemHidden" = 1;
-      };
-      # Finder
-      "com.apple.finder"  = {
-        FXPreferredGroupBy = "Kind";
-        FXArrangeGroupViewBy = "Name";
-        ShowExternalHardDrivesOnDesktop = false;
-        ShowHardDrivesOnDesktop = false;
-        ShowMountedServersOnDesktop = false;
-        ShowRemovableMediaOnDesktop = false;
-        ShowRecentTags = false;
-        QLEnableTextSelection = true;
-        NewWindowTargetPath = "file:///Users/rmgpinto"; # tbd as argument
-      };
-      "com.apple.desktopservices" = {
-        DSDontWriteNetworkStores = true;
-        DSDontWriteUSBStores = true;
-      };
-      "~/Library/Preferences/ByHost/com.apple.screensaver" = {
-        idleTime = 300;
-      };
-      # Safari
-      "com.apple.Safari" = {
-        IncludeDevelopMenu = true; # tbd
-        WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
-        AlwaysRestoreSessionAtLaunch = true; # tbd
-        AlwaysShowTabBar = true; # tbd
-        SearchProviderShortName = "DuckDuckGo"; # tbd
-        "ShowFavoritesBar-v2" = true; # tbd
-      };
-      # Calendar
-      ".GlobalPreferences".AppleFirstWeekday = {
-        gregorian = 2;
-      };
+    # Safari
+    CustomUserPreferences."com.apple.Safari" = {
+      IncludeDevelopMenu = true; # tbd
+      WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
+      AlwaysRestoreSessionAtLaunch = true; # tbd
+      AlwaysShowTabBar = true; # tbd
+      SearchProviderShortName = "DuckDuckGo"; # tbd
+      "ShowFavoritesBar-v2" = true; # tbd
     };
   };
 
