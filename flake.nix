@@ -10,23 +10,26 @@
   };
 
   outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, ... }:
-    let
-      inputs.username = "rmgpinto";
-    in
-    {
-      darwinConfigurations.macos = nix-darwin.lib.darwinSystem {
-        inherit inputs;
-        modules = [
-          ./nix-darwin
-          home-manager.darwinModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.${inputs.username}.imports = [ ./home-manager ];
+  let
+    inputs.username = "rmgpinto";
+  in
+  {
+    darwinConfigurations.macos = nix-darwin.lib.darwinSystem {
+      inherit inputs;
+      modules = [
+        ./nix-darwin
+        home-manager.darwinModules.home-manager
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            users.${inputs.username} = {
+              home = "/Users/${inputs.username}";
+              imports = [ ./home-manager ];
             };
-          }
-        ];
-      };
+          };
+        }
+      ];
     };
+  };
 }
