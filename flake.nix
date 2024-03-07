@@ -12,15 +12,18 @@
   outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, ... }:
   let
     username = "rmgpinto";
+    homeDirectory = "/Users/${username}";
     arch = "aarch64-darwin";
     stateVersion = "23.11";
   in
   {
     darwinConfigurations.macos = nix-darwin.lib.darwinSystem {
-      specialArgs = { inherit inputs username arch; };
+      specialArgs = { inherit inputs username homeDirectory arch stateVersion; };
       modules = [
-        (import ./nix-darwin)
-        # home-manager.darwinModules.home-manager (import ./home-manager)
+        ./nix-darwin {
+          users.users.${username}.home = homeDirectory;
+        }
+        home-manager.darwinModules.home-manager (import ./home-manager)
       ];
     };
   };
