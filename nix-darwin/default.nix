@@ -1,4 +1,4 @@
-{ inputs, pkgs, username, arch, ... }: {
+{ inputs, pkgs, homeDirectory, arch, ... }: {
   nixpkgs.hostPlatform = arch;
   nix.settings.experimental-features = "nix-command flakes";
   services.nix-daemon.enable = true;
@@ -115,7 +115,7 @@
       ShowRemovableMediaOnDesktop = false;
       ShowRecentTags = false;
       QLEnableTextSelection = true;
-      NewWindowTargetPath = "file:///Users/${username}";
+      NewWindowTargetPath = "file://${homeDirectory}";
     };
     CustomUserPreferences."com.apple.desktopservices" = {
       DSDontWriteNetworkStores = true;
