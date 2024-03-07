@@ -1,5 +1,5 @@
-{ inputs, pkgs, ... }: {
-  nixpkgs.hostPlatform = "aarch64-darwin";
+{ inputs, pkgs, username, arch, ... }: {
+  nixpkgs.hostPlatform = arch;
   nix.settings.experimental-features = "nix-command flakes";
   services.nix-daemon.enable = true;
   system.configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
@@ -115,7 +115,7 @@
       ShowRemovableMediaOnDesktop = false;
       ShowRecentTags = false;
       QLEnableTextSelection = true;
-      NewWindowTargetPath = "file:///Users/${inputs.username}";
+      NewWindowTargetPath = "file:///Users/${username}";
     };
     CustomUserPreferences."com.apple.desktopservices" = {
       DSDontWriteNetworkStores = true;
