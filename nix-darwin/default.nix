@@ -12,10 +12,10 @@
     echo "Disabling hotkeys..."
     /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist \
       -c 'Delete AppleSymbolicHotKeys:64' \
-      -c 'Add AppleSymbolicHotKeys:64:enabled bool false'
+      -c 'Add AppleSymbolicHotKeys:64:enabled bool false' || true
     /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist \
       -c 'Delete AppleSymbolicHotKeys:65' \
-      -c 'Add AppleSymbolicHotKeys:65:enabled bool false'
+      -c 'Add AppleSymbolicHotKeys:65:enabled bool false' || true
     
     echo "Creating Screenshots directory..."
     mkdir -p ${homeDirectory}/Screenshots
