@@ -35,6 +35,7 @@
           users.users.${username}.home = darwinHomeDirectory;
         }
         home-manager.darwinModules.home-manager (import ./home-manager) {
+          nixpkgs.config.allowUnfree = true;
           home-manager.extraSpecialArgs = {
             homeDirectory = darwinHomeDirectory;
             os = darwinOS;
