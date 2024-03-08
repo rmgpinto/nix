@@ -15,8 +15,6 @@
       plugins = [
         # Personal
         "git"
-        "zsh-autosuggestions"
-        "zsh-completions"
 
         # Work
         "kubectl"
