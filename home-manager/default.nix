@@ -2,9 +2,8 @@
   let
     sharedDotfiles = import ./dotfiles.nix { inherit pkgs; };
     osDotfiles = if (lib.pathExists ./dotfiles_${os}.nix) then import ./dotfiles_${os}.nix { inherit pkgs; } else {};
-    # osDotfiles = import ./dotfiles__${os}.nix { inherit pkgs; };
-    # sharedPrograms = import ./programs { inherit pkgs; };
-    # osPrograms = import ./programs/${os}.nix { inherit pkgs; };
+    sharedPrograms = import ./programs.nix { inherit pkgs; };
+    osPrograms = if (lib.pathExists ./programs_${os}.nix) then import ./programs_${os}.nix { inherit pkgs; } else {};
   in
   {
   home-manager = {
@@ -22,10 +21,10 @@
           osDotfiles
         ];
       };
-      # programs = lib.mkMerge [
-      #   sharedPrograms
-      #   osPrograms
-      # ];
+      programs = lib.mkMerge [
+        sharedPrograms
+        osPrograms
+      ];
     };
   };
 }

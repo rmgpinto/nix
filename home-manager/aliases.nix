@@ -8,7 +8,7 @@
     flushdns = "sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder";
     g = "git";
     tf = "terraform";
-    docked = "docker run --rm -it -v ${PWD}:/rails -v ruby-bundle-cache:/bundle -p 3000:3000 -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/rails/cli";
+    docked = "docker run --rm -it -v \${PWD}:/rails -v ruby-bundle-cache:/bundle -p 3000:3000 -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/rails/cli";
     rails = "docked rails";
     rails-dev ="docked bin/dev";
     rails-shell="docker exec -it $(docker ps | grep rails | awk \"{print \$1}\") bash";
@@ -24,5 +24,5 @@
     # Work
     tg = "terragrunt";
     k = "kubectl";
-  }
+  };
 }
