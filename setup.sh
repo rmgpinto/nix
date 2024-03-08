@@ -14,7 +14,7 @@ if ! command -v nix > /dev/null; then
 fi
 echo "${GREEN}Done.\n"
 
-echo "${GREEN}Renaming nix.conf and zshenv files..."
+echo "${GREEN}Renaming nix.conf, zshenv and mac os shortcut files..."
 if ! test -L /etc/nix/nix.conf; then
   if test -f /etc/nix/nix.conf; then
     sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.before-nix-darwin
@@ -23,6 +23,11 @@ fi
 if ! test -L /etc/zshenv; then
   if test -f /etc/zshenv; then
     sudo mv /etc/zshenv /etc/zshenv.before-nix-darwin
+  fi
+fi
+if ! test -L /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AliasBadgeIcon.icns; then
+  if test -d /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AliasBadgeIcon.icns; then
+    sudo mv /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AliasBadgeIcon.icns /System/Library/CoreServices/CoreTypes.bundle/Contents/AliasBadgeIcon.icns.before-nix-darwin
   fi
 fi
 echo "${GREEN}Done.\n"
