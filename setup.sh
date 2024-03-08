@@ -14,7 +14,7 @@ if ! command -v nix > /dev/null; then
 fi
 echo "${GREEN}Done.\n"
 
-echo "${GREEN}Renaming nix.conf, zshenv and mac os shortcut files..."
+echo "${GREEN}Renaming nix.conf and zshenv files..."
 if ! test -L /etc/nix/nix.conf; then
   if test -f /etc/nix/nix.conf; then
     sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.before-nix-darwin
