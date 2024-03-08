@@ -17,3 +17,9 @@ git clone https://github.com/rmgpinto/nix.git
 cd nix
 ./setup.sh
 ```
+
+## Setup git
+```bash
+gh auth login
+gh auth setup-git
+```
