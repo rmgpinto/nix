@@ -8,20 +8,17 @@
   system.stateVersion = 4;
 
   # Activation scripts
-  system.activationScripts.extraActivation.text = let
-    hotkeys = [
-      64
-      65
-    ];
-    disableHotKeyCommands = map (key: "/usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Add AppleSymbolicHotKeys:${toString key}:enabled bool false") hotkeys;
-    in ''
-      echo "Disabling hotkeys..."
-      ${lib.concatStringsSep "\n" disableHotKeyCommands}
-      echo "Creating Screenshots directory..."
-      mkdir -p ${homeDirectory}/Screenshots
-      echo "Activating Settings..."
-      /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
-    '';
+  system.activationScripts.extraActivation.text = ''
+    echo "Disabling hotkeys..."
+    /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Add AppleSymbolicHotKeys:64:enabled bool false
+    /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Add AppleSymbolicHotKeys:65:enabled bool false
+    
+    echo "Creating Screenshots directory..."
+    mkdir -p ${homeDirectory}/Screenshots
+
+    echo "Activating Settings..."
+    /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+  '';
 
   # System Preferences
   system.defaults = {
