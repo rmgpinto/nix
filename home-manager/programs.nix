@@ -23,6 +23,7 @@
       ];
       theme = "robbyrussell";
     };
+    initExtra = (import ./aliases.nix { inherit pkgs; }).functions;
   };
 
   # direnv = {
