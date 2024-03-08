@@ -59,7 +59,10 @@
       wvous-bl-corner = 1;
       wvous-br-corner = 1;
       # Dock apps
-      persistent-apps = []; # tbd
+      persistent-apps = [
+        "/Applications/Safari.app"
+        "~/Applications/Home Manager Apps/Alacritty.app"
+      ];
     };
     # Screen saver
     # Start after 5 minutes

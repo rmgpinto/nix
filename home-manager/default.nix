@@ -26,7 +26,6 @@
         sharedPrograms
         osPrograms
       ];
-      targets.darwin.defaults."com.apple.Safari".IncludeDevelopMenu = true;
     };
   };
 }
