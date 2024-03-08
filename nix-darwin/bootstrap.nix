@@ -6,7 +6,6 @@ let
     ];
     disableHotKeyCommands = map (key:
       ''
-        /usr/libexec/PlistBuddy $HOME/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Delete AppleSymbolicHotKeys:${toString key}
         /usr/libexec/PlistBuddy $HOME/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Add AppleSymbolicHotKeys:${toString key}:enabled bool false
       '') hotkeys;
 in {
