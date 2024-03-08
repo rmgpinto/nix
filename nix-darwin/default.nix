@@ -8,7 +8,7 @@
   system.stateVersion = 4;
 
   # Activation scripts
-  system.activationScripts.bootstrap.text = let
+  system.activationScripts.extraActivation.text = let
     hotkeys = [
       64
       65
@@ -17,13 +17,11 @@
     in ''
       echo "Disabling hotkeys..."
       ${lib.concatStringsSep "\n" disableHotKeyCommands}
-  '';
-  system.activationScripts.createScreenshotsDirectory.text = ''
-    mkdir -p ${homeDirectory}/Screenshots
-  '';
-  system.activationScripts.postUserActivation.text = ''
-    /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
-  '';
+      echo "Creating Screenshots directory..."
+      mkdir -p ${homeDirectory}/Screenshots
+      echo "Activating Settings..."
+      /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+    '';
 
   # System Preferences
   system.defaults = {
