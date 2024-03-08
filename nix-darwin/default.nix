@@ -61,7 +61,8 @@
       # Dock apps
       persistent-apps = [
         "/Applications/Safari.app"
-        "~/Applications/Home Manager Apps/Alacritty.app"
+        "/Applications/Mail.app"
+        "~/Applications/Home \Manager \Apps/Alacritty.app"
       ];
     };
     # Screen saver
