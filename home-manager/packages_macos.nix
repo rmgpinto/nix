@@ -1,4 +1,4 @@
 { pkgs }: 
   with pkgs; [
-    notion
+    raycast
   ]
