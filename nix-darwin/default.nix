@@ -1,4 +1,4 @@
-{ inputs, pkgs, homeDirectory, arch, ... }: {
+{ inputs, pkgs, lib, homeDirectory, arch, ... }: {
   nixpkgs.hostPlatform = arch;
   nix.settings.experimental-features = "nix-command flakes";
   services.nix-daemon.enable = true;
@@ -6,6 +6,9 @@
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
+
+  # Activation scripts
+  system.activationScripts.bootstrap = import ./bootstrap.nix { inherit lib; };
 
   # System Preferences
   system.defaults = {
