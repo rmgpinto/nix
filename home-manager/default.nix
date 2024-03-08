@@ -1,7 +1,10 @@
 { pkgs, lib, username, homeDirectory, stateVersion, os, ... }:
   let
-    sharedFiles = import ./dotfiles { inherit pkgs; };
-    osFiles = import ./dotfiles/${os}.nix { inherit pkgs; };
+    sharedDotfiles = import ./dotfiles.nix { inherit pkgs; };
+    osDotfiles = if (lib.pathExists ./dotfiles_${os}.nix) then import ./dotfiles_${os}.nix { inherit pkgs; } else {};
+    # osDotfiles = import ./dotfiles__${os}.nix { inherit pkgs; };
+    # sharedPrograms = import ./programs { inherit pkgs; };
+    # osPrograms = import ./programs/${os}.nix { inherit pkgs; };
   in
   {
   home-manager = {
@@ -15,11 +18,14 @@
         # sessionVariables = import ./env.nix { inherit pkgs username; };
         shellAliases = (import ./aliases.nix { inherit pkgs; }).shell;
         file = lib.mkMerge [
-          sharedFiles
-          osFiles
+          sharedDotfiles
+          osDotfiles
         ];
       };
-      # programs = import ./programs.nix { inherit pkgs; };
+      # programs = lib.mkMerge [
+      #   sharedPrograms
+      #   osPrograms
+      # ];
     };
   };
 }
