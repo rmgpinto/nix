@@ -61,8 +61,13 @@
       # Dock apps
       persistent-apps = [
         "/Applications/Safari.app"
-        "/Applications/Mail.app"
-        "~/Applications/Home \Manager \Apps/Alacritty.app"
+        "/System/Applications/Mail.app"
+        "~/Applications/Home\ Manager\ Apps/Notion.app"
+        "~/Applications/Home\ Manager\ Apps/Visual\ Studio\ Code.app"
+        "~/Applications/Home\ Manager\ Apps/Alacritty.app"
+        "~/Applications/Home\ Manager\ Apps/Slack.app"
+        "/System/Applications/Calendar.app"
+        "/System/Applications/System\ Settings.app"
       ];
     };
     # Screen saver
