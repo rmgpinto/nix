@@ -60,12 +60,12 @@
       wvous-br-corner = 1;
       # Dock apps
       persistent-apps = [
-        "/Applications/Safari.app"
+        "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
         "/System/Applications/Mail.app"
-        "~/Applications/Home\ Manager\ Apps/Notion.app"
-        "~/Applications/Home\ Manager\ Apps/Visual\ Studio\ Code.app"
-        "~/Applications/Home\ Manager\ Apps/Alacritty.app"
-        "~/Applications/Home\ Manager\ Apps/Slack.app"
+        "${homeDirectory}/Applications/Home\ Manager\ Apps/Notion.app"
+        "${homeDirectory}/Applications/Home\ Manager\ Apps/Visual\ Studio\ Code.app"
+        "${homeDirectory}/Applications/Home\ Manager\ Apps/Alacritty.app"
+        "${homeDirectory}/Applications/Home\ Manager\ Apps/Slack.app"
         "/System/Applications/Calendar.app"
         "/System/Applications/System\ Settings.app"
       ];
