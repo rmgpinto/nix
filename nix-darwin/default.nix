@@ -11,10 +11,10 @@
   system.activationScripts.extraActivation.text = ''
     echo "Disabling hotkeys..."
     /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist \
-      -c 'Delete AppleSymbolicHotKeys:64'
+      -c 'Delete AppleSymbolicHotKeys:64' \
       -c 'Add AppleSymbolicHotKeys:64:enabled bool false'
     /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist \
-      -c 'Delete AppleSymbolicHotKeys:65'
+      -c 'Delete AppleSymbolicHotKeys:65' \
       -c 'Add AppleSymbolicHotKeys:65:enabled bool false'
     
     echo "Creating Screenshots directory..."
