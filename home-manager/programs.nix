@@ -32,5 +32,12 @@
 
   git = import ./git.nix { inherit pkgs git; };
 
-  gpg.enable = true;
+  gpg = {
+    enable = true;
+  };
+
+  gh = {
+    enable = true;
+    gitCredentialHelper.enable = true;
+  };
 }
