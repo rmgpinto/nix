@@ -1,8 +1,8 @@
-{ pkgs, lib, username, homeDirectory, stateVersion, os, ... }:
+{ pkgs, lib, username, homeDirectory, stateVersion, os, git, ... }:
   let
     sharedDotfiles = import ./dotfiles.nix { inherit pkgs; };
     osDotfiles = if (lib.pathExists ./dotfiles_${os}.nix) then import ./dotfiles_${os}.nix { inherit pkgs; } else {};
-    sharedPrograms = import ./programs.nix { inherit pkgs; };
+    sharedPrograms = import ./programs.nix { inherit pkgs git; };
     osPrograms = if (lib.pathExists ./programs_${os}.nix) then import ./programs_${os}.nix { inherit pkgs; } else {};
   in
   {

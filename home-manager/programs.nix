@@ -1,6 +1,4 @@
-{ pkgs }:
-
-{
+{ pkgs, git }: {
   home-manager = {
     enable = true;
   };
@@ -32,7 +30,7 @@
     nix-direnv.enable = true;
   };
 
-  # git = import ./git.nix { inherit pkgs; };
+  git = import ./git.nix { inherit pkgs git; };
 
-  # gpg.enable = true;
+  gpg.enable = true;
 }

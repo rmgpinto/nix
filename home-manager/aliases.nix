@@ -26,6 +26,19 @@
     k = "kubectl";
   };
 
+  git = {
+    co = "checkout";
+    br = "branch";
+    ci = "commit -S";
+    unstage = "reset HEAD --";
+    l = "log --oneline --graph";
+    lp = "log --oneline --graph -p";
+    st = "status -s";
+    df = "diff";
+    dfs = "diff --staged";
+    sha = "rev-parse HEAD";
+  };
+
   functions = ''
     function tfa() {
       if [ "$1" != "" ]; then
