@@ -26,7 +26,7 @@ if ! test -L /etc/zshenv; then
   fi
 fi
 if ! test -L /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AliasBadgeIcon.icns; then
-  if test -d /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AliasBadgeIcon.icns; then
+  if test -f /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AliasBadgeIcon.icns; then
     sudo mv /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AliasBadgeIcon.icns /System/Library/CoreServices/CoreTypes.bundle/Contents/AliasBadgeIcon.icns.before-nix-darwin
   fi
 fi
