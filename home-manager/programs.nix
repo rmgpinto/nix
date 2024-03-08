@@ -26,17 +26,13 @@
     initExtra = (import ./aliases.nix { inherit pkgs; }).functions;
   };
 
-  # direnv = {
-  #   enable = true;
-  #   enableZshIntegration = true;
-  #   nix-direnv.enable = true;
-  # };
+  direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
 
   # git = import ./git.nix { inherit pkgs; };
 
   # gpg.enable = true;
-
-  # jq.enable = true;
-
-  # vscode = import ./vscode.nix { inherit pkgs; }; # extract to os.nix
 }
