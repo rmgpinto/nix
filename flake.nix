@@ -15,17 +15,18 @@
     darwinHomeDirectory = "/Users/${username}";
     darwinArch = "aarch64-darwin";
     darwinOS = "macos";
-    stateVersion = "23.11";
+    hostname = "laptop";
     git = {
       name = "Ricardo Gândara Pinto";
       email = "hessian_loom_0u@icloud.com";
       signingkey = "EFCF63DE871D4276";
     };
+    stateVersion = "23.11";
   in
   {
     darwinConfigurations.macos = nix-darwin.lib.darwinSystem {
       specialArgs = {
-        inherit inputs username stateVersion git;
+        inherit inputs username hostname git stateVersion;
         homeDirectory = darwinHomeDirectory;
         arch = darwinArch;
         os = darwinOS;

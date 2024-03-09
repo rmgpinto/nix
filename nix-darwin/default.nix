@@ -1,4 +1,4 @@
-{ inputs, pkgs, lib, homeDirectory, arch, ... }: {
+{ inputs, pkgs, lib, arch, hostname, homeDirectory, ... }: {
   nixpkgs.hostPlatform = arch;
   nix.settings.experimental-features = "nix-command flakes";
   services.nix-daemon.enable = true;
@@ -9,7 +9,7 @@
 
   # Activation scripts
   system.activationScripts.extraActivation.text = ''
-    echo "Disabling hotkeys..."
+    echo "Disabling Hotkeys..."
     /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Delete AppleSymbolicHotKeys:64' || true
     /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Add AppleSymbolicHotKeys:64:enabled bool false' || true
     /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Delete AppleSymbolicHotKeys:65' || true
@@ -17,6 +17,9 @@
     
     echo "Creating Screenshots directory..."
     mkdir -p ${homeDirectory}/Screenshots
+
+    echo "Changing Raycast hotkey..."
+    defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49";
 
     echo "Activating Settings..."
     /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
@@ -172,4 +175,8 @@
 
   # Touch ID & Password
   security.pam.enableSudoTouchIdAuth = true;
+
+  # Hostname
+  networking.hostName = hostname;
+  networking.computerName = hostname;
 }
