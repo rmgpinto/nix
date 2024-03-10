@@ -183,6 +183,6 @@
   # Raycast
   launchd.user.agents.raycast = {
     serviceConfig.RunAtLoad = true;
-    serviceConfig.ProgramArguments = [ "/Applications/Nix Apps/Raycast.app/Contents/MacOS/Raycast" ];
+    serviceConfig.ProgramArguments = [ "/${homeDirectory}/Home\ Manager\ Apps/Raycast.app/Contents/MacOS/Raycast" ];
   };
 }
