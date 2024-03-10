@@ -161,12 +161,15 @@
 
     # Safari
     CustomUserPreferences."com.apple.Safari" = {
-      IncludeDevelopMenu = true; # tbd
-      WebKitDeveloperExtrasEnabledPreferenceKey = true; # tbd
+      IncludeDevelopMenu = true;
+      WebKitDeveloperExtrasEnabledPreferenceKey = true;
       AlwaysRestoreSessionAtLaunch = true;
       AlwaysShowTabBar = true;
       SearchProviderShortName = "DuckDuckGo";
       "ShowFavoritesBar-v2" = true;
+    };
+    CustomUserPreferences."com.apple.Safari.SandboxBroker" = {
+      ShowDevelopMenu = true;
     };
   };
 
