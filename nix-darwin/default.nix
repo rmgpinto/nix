@@ -183,19 +183,6 @@
   networking.hostName = hostname;
   networking.computerName = hostname;
 
-  # Raycast
-  launchd.user.agents.raycast = {
-    serviceConfig.RunAtLoad = true;
-    serviceConfig.ProgramArguments = [ "${homeDirectory}/Applications/Home\ Manager\ Apps/Raycast.app/Contents/MacOS/Raycast" ];
-  };
-
-  # Colima
-  launchd.user.agents.colima = {
-    serviceConfig.RunAtLoad = true;
-    serviceConfig.KeepAlive = true;
-    serviceConfig.ProgramArguments = [ "${pkgs.colima}/bin/colima" "start" ];
-  };
-
   environment = {
     pathsToLink = [
       "/share/zsh"
