@@ -188,4 +188,11 @@
     serviceConfig.RunAtLoad = true;
     serviceConfig.ProgramArguments = [ "${homeDirectory}/Applications/Home\ Manager\ Apps/Raycast.app/Contents/MacOS/Raycast" ];
   };
+
+  environment = {
+    pathsToLink = [
+      "/share/zsh"
+      "/share/qemu"
+    ];
+  };
 }

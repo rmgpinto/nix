@@ -3,5 +3,4 @@
     raycast
     qemu # podman dependency
     podman
-    podman-desktop
   ]
