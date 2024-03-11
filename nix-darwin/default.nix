@@ -193,7 +193,7 @@
   launchd.user.agents.colima = {
     serviceConfig.RunAtLoad = true;
     serviceConfig.KeepAlive = true;
-    serviceConfig.ProgramArguments = [ "${pkgs.colima}" "start" ];
+    serviceConfig.ProgramArguments = [ "${pkgs.colima}/bin/colima" "start" ];
   };
 
   environment = {
