@@ -1,6 +1,6 @@
 { pkgs }: 
   with pkgs; [
     raycast
-    # qemu # podman dependency
+    qemu # podman dependency
     podman
   ]
