@@ -83,7 +83,7 @@
         "${homeDirectory}/Applications/Home\ Manager\ Apps/Notion.app"
         "${homeDirectory}/Applications/Home\ Manager\ Apps/Visual\ Studio\ Code.app"
         "${homeDirectory}/Applications/Home\ Manager\ Apps/Alacritty.app"
-        "${pkgs.allacritty}/Applications/Alacritty.app"
+        "${pkgs.alacritty}/Applications/Alacritty.app"
         "${homeDirectory}/Applications/Home\ Manager\ Apps/Slack.app"
         "/System/Applications/Calendar.app"
         "/System/Applications/System\ Settings.app"
