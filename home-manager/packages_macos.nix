@@ -1,6 +1,6 @@
 { pkgs }: 
   with pkgs; [
     raycast
-    docker-machine
     docker
+    docker-compose
   ]
