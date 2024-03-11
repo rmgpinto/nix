@@ -189,10 +189,15 @@
     serviceConfig.ProgramArguments = [ "${homeDirectory}/Applications/Home\ Manager\ Apps/Raycast.app/Contents/MacOS/Raycast" ];
   };
 
+  # Podman
+  launchd.user.agents.podman = {
+    serviceConfig.RunAtLoad = true;
+    serviceConfig.ProgramArguments = [ "${pkgs.podman}/bin/podman machine start" ];
+  };
+
   environment = {
     pathsToLink = [
       "/share/zsh"
-      "/share/qemu"
     ];
   };
 }
