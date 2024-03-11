@@ -2,5 +2,5 @@
   with pkgs; [
     raycast
     docker
-    docker-compose
+    colima
   ]
