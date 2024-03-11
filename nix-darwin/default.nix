@@ -189,6 +189,12 @@
     serviceConfig.ProgramArguments = [ "${homeDirectory}/Applications/Home\ Manager\ Apps/Raycast.app/Contents/MacOS/Raycast" ];
   };
 
+  # Colima
+  launchd.user.agents.colima = {
+    serviceConfig.RunAtLoad = true;
+    serviceConfig.ProgramArguments = [ "colima start" ];
+  };
+
   environment = {
     pathsToLink = [
       "/share/zsh"
