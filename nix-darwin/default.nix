@@ -192,7 +192,7 @@
   environment = {
     pathsToLink = [
       "/share/zsh"
-      "/share/qemu"
+      # "/share/qemu"
     ];
   };
 }
