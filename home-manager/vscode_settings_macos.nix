@@ -1,4 +1,3 @@
-{ pkgs }:
 let
   colorTheme = "Default Dark Modern";
   font = "Fira Code";

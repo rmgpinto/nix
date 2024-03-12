@@ -14,7 +14,7 @@
       home = {
         inherit username homeDirectory stateVersion;
         enableNixpkgsReleaseCheck = false;
-        sessionVariables = import ./env.nix { inherit pkgs username; };
+        sessionVariables = import ./env.nix { inherit username; };
         shellAliases = (import ./aliases.nix).shell;
         file = lib.mkMerge [
           sharedDotfiles

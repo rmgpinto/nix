@@ -8,5 +8,5 @@
   globalSnippets = { };
   keybindings = [ ];
   mutableExtensionsDir = false;
-  userSettings = import ./vscode_settings_${os}.nix { inherit pkgs; };
+  userSettings = import ./vscode_settings_${os}.nix;
 }
