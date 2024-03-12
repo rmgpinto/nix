@@ -21,7 +21,9 @@
       ];
       theme = "robbyrussell";
     };
-    initExtra = (import ./aliases.nix { inherit pkgs; }).functions;
+    initExtra = ''
+      eval "$(/opt/homebrew/bin/brew shellenv)"'
+      '' + (import ./aliases.nix { inherit pkgs; }).functions;
   };
 
   direnv = {
