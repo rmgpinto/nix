@@ -22,7 +22,6 @@ in
     "editor.defaultFormatter" = "B4dM4n.nixpkgs-fmt";
     "editor.formatOnSave" = true;
   };
-  "git.enabled" =  false;
   "search.exclude" = {
     "**/.git" = true;
     "**/node_modules" = true;
