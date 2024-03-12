@@ -80,7 +80,7 @@
       persistent-apps = [
         "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
         "/System/Applications/Mail.app"
-        # "${homeDirectory}/Applications/Home\ Manager\ Apps/Notion.app"
+        "/Applications/Home\ Manager\ Apps/Notion.app"
         "${pkgs.vscode}/Applications/Visual\ Studio\ Code.app"
         "${pkgs.alacritty}/Applications/Alacritty.app"
         "${pkgs.slack}/Applications/Slack.app"
