@@ -12,6 +12,7 @@ xcode-select --install
 ## Clone this repo
 
 ```bash
+mkdir -p dev/work
 mkdir -p dev/personal && cd $_
 git clone https://github.com/rmgpinto/nix.git
 cd nix
