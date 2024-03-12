@@ -1,6 +1,6 @@
 { pkgs }:
 let
-  colorTheme = "Dark Modern";
+  colorTheme = "Default Dark Modern";
   font = "Fira Code";
 in
 {
@@ -21,7 +21,7 @@ in
   };
 
   "[nix]" = {
-    "editor.defaultFormatter" = "b4dm4n.nixpkgs-fmt";
+    "editor.defaultFormatter" = "B4dM4n.nixpkgs-fmt";
     "editor.formatOnSave" = true;
   };
 
