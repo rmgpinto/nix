@@ -1,3 +1,4 @@
 [
   "notion"
+  "1password"
 ]
