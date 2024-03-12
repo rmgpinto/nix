@@ -19,16 +19,15 @@ cd nix
 ./setup.sh
 ```
 
-## Setup git
+## Setup
+1. Login 1Password
+2. Setup 1Password CLI
+```bash
+op account add --address my.1password.com --signin
+```
+2. Login to GitHub
 ```bash
 gh auth login
 gh auth setup-git
 ```
-
-## Setup raycast
-Load `config/raycast.rayconfig` into Raycast
-
-## Setup 1password
-```bash
-op account add --address my.1password.com --signin
-```
+3.Load `config/raycast.rayconfig` into Raycast
