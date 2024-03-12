@@ -189,6 +189,7 @@
     ];
   };
 
+  # Homebrew
   homebrew = {
     enable = true;
     masApps = import ./mas-apps.nix { inherit pkgs; };

@@ -7,6 +7,12 @@ GREEN='\033[0;32m'
 echo "${GREEN}Go to System Preferences -> Privacy & Security -> Full Disk Access and add Terminal.app\n"
 read -p "Press enter to continue"
 
+echo "${GREEN}Installing homebrew..."
+if ! command -v brew > /dev/null; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+echo "${GREEN}Done.\n"
+
 echo "${GREEN}Installing nix..."
 if ! command -v nix > /dev/null; then
   curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
