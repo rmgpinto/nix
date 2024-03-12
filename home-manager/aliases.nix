@@ -1,4 +1,4 @@
-{ pkgs }: {
+{
   shell = {
     # Personal
     zs = "source ~/.zshrc";

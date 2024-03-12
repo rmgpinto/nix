@@ -11,7 +11,7 @@
     ".direnv/"
     ".vscode/"
   ];
-  aliases = (import ./aliases.nix { inherit pkgs; }).git;
+  aliases = (import ./aliases.nix).git;
   extraConfig = {
     user = {
       signingkey = git.signingkey;
