@@ -1,10 +1,15 @@
-{ colorTheme, font, terminalFont }: {
+{ pkgs }:
+let
+  colorTheme = "Dark Modern";
+  font = "Fira Code";
+in
+{
   "workbench.colorTheme" = colorTheme;
   "editor.renderWhitespace" = "all";
   "editor.fontLigatures" = true;
   "editor.formatOnSave" = true;
   "editor.tabSize" = 2;
-  "terminal.integrated.fontFamily" = terminalFont;
+  "terminal.integrated.fontFamily" = font;
   "terminal.integrated.scrollback" = 10000;
 
   "[terraform]" = {
@@ -16,7 +21,7 @@
   };
 
   "[nix]" = {
-    "editor.defaultFormatter" = "B4dM4n.nixpkgs-fmt";
+    "editor.defaultFormatter" = "b4dm4n.nixpkgs-fmt";
     "editor.formatOnSave" = true;
   };
 
