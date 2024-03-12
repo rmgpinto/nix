@@ -3,4 +3,5 @@
     raycast
     _1password
     slack
+    zoom-us
   ]

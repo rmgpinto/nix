@@ -200,6 +200,7 @@
   # Homebrew
   homebrew = {
     enable = true;
-    masApps = import ./mas-apps.nix { inherit pkgs; };
+    casks = import ./cask-apps.nix;
+    masApps = import ./mas-apps.nix;
   };
 }
