@@ -13,16 +13,16 @@
       plugins = [
         # Personal
         "git"
+        "direnv"
 
         # Work
         "kubectl"
         "helm"
-        "direnv"
       ];
       theme = "robbyrussell";
     };
     initExtra = ''
-      eval "$(/opt/homebrew/bin/brew shellenv)"'
+      eval "$(/opt/homebrew/bin/brew shellenv)"
       '' + (import ./aliases.nix { inherit pkgs; }).functions;
   };
 
