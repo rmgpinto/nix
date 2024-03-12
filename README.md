@@ -23,3 +23,6 @@ cd nix
 gh auth login
 gh auth setup-git
 ```
+
+## Setup raycast
+Load `config/raycast.rayconfig` into Raycast
