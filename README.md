@@ -26,3 +26,8 @@ gh auth setup-git
 
 ## Setup raycast
 Load `config/raycast.rayconfig` into Raycast
+
+## Setup 1password
+```bash
+op account add --address my.1password.com --signin
+```
