@@ -200,7 +200,8 @@
   # Homebrew
   homebrew = {
     enable = true;
-    casks = import ./cask-apps.nix;
-    masApps = import ./mas-apps.nix;
+    brews = import ./brew-apps.nix;
+    casks = import ./brew-cask-apps.nix;
+    masApps = import ./brew-mas-apps.nix;
   };
 }
