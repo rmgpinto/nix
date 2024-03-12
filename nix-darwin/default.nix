@@ -189,6 +189,14 @@
     ];
   };
 
+  # Fonts
+  fonts = {
+    fontDir.enable = true;
+    fonts = with pkgs; [
+      fira-code
+    ];
+  };
+
   # Homebrew
   homebrew = {
     enable = true;

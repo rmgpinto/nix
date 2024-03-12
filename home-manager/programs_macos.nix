@@ -1,4 +1,4 @@
-{ pkgs }: {
+{ pkgs, os }: {
   alacritty = {
     enable = true;
   };
@@ -7,5 +7,5 @@
     enable = true;
   };
 
-  # vscode = import ./vscode.nix { inherit pkgs; };
+  vscode = import ./vscode_${os}.nix { inherit pkgs os; };
 }
