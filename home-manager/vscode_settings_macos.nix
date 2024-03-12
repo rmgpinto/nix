@@ -11,7 +11,6 @@ in
   "editor.tabSize" = 2;
   "terminal.integrated.fontFamily" = font;
   "terminal.integrated.scrollback" = 10000;
-
   "[terraform]" = {
       "editor.formatOnSave" = true;
       "editor.defaultFormatter" = "hashicorp.terraform";
@@ -19,12 +18,11 @@ in
   "[terraform-vars]" = {
     "editor.formatOnSave" = true;
   };
-
   "[nix]" = {
     "editor.defaultFormatter" = "B4dM4n.nixpkgs-fmt";
     "editor.formatOnSave" = true;
   };
-
+  "git.enabled" =  false;
   "search.exclude" = {
     "**/.git" = true;
     "**/node_modules" = true;
