@@ -1,7 +1,7 @@
 { pkgs, lib, username, homeDirectory, stateVersion, os, git, ... }:
   let
-    sharedDotfiles = import ./dotfiles.nix { inherit pkgs; };
-    osDotfiles = if (lib.pathExists ./dotfiles_${os}.nix) then import ./dotfiles_${os}.nix { inherit pkgs; } else {};
+    sharedDotfiles = import ./dotfiles.nix;
+    osDotfiles = if (lib.pathExists ./dotfiles_${os}.nix) then import ./dotfiles_${os}.nix else {};
     sharedPrograms = import ./programs.nix { inherit pkgs git; };
     osPrograms = if (lib.pathExists ./programs_${os}.nix) then import ./programs_${os}.nix { inherit pkgs os; } else {};
     osPackages = if (lib.pathExists ./packages_${os}.nix) then import ./packages_${os}.nix { inherit pkgs; } else [];
