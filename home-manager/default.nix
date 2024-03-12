@@ -9,7 +9,7 @@
   {
   home-manager = {
     useGlobalPkgs = true;
-    # useUserPackages = true;
+    useUserPackages = true;
     users.${username} = { pkgs, ... }: {
       home = {
         inherit username homeDirectory stateVersion;
