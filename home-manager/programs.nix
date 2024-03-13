@@ -23,7 +23,7 @@
     };
     initExtra = ''
       eval "$(/opt/homebrew/bin/brew shellenv)"
-      '' + (import ./aliases.nix).functions;
+    '' + (import ./aliases.nix).functions;
   };
 
   direnv = {
