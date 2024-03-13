@@ -24,7 +24,8 @@
       gpgsign = "true";
     };
     gpg = {
-      program = "gpg2";
+      format = "ssh";
+      program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
     };
     push = {
       autoSetupRemote = true;
