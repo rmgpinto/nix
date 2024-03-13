@@ -25,9 +25,5 @@ cd nix
 ```bash
 op account add --address my.1password.com --signin
 ```
-2. Login to GitHub
-```bash
-gh auth login
-gh auth setup-git
-```
-3.Load `config/raycast.rayconfig` into Raycast
+3. Load `config/raycast.rayconfig` into Raycast
+4. Follow 1Password SSH agent [instructions](https://developer.1password.com/docs/ssh/get-started#step-3-turn-on-the-1password-ssh-agent)
