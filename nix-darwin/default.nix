@@ -1,6 +1,16 @@
 { inputs, pkgs, lib, arch, hostname, homeDirectory, ... }: {
   nixpkgs.hostPlatform = arch;
-  nix.settings.experimental-features = "nix-command flakes";
+  nix = {
+    settings.experimental-features = "nix-command flakes";
+    gc = {
+      automatic = true;
+      options = "--delete-older-than 14d";
+      interval = {
+        Hour = 12;
+        Minute = 0;
+      };
+    };
+  };
   services.nix-daemon.enable = true;
   system.configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
   # Used for backwards compatibility, please read the changelog before changing.
