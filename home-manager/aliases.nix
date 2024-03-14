@@ -40,10 +40,25 @@
   };
 
   functions = ''
-    function tfa() {
+  function tfa() {
+    if [ "$1" != "" ]; then
+        ENVIRONMENTS=(local development dev staging stage qa production prod)
+        if [[ ''${ENVIRONMENTS[(r)\$1]} == "$1" ]]; then
+            export TF_WORKSPACE="$1"
+            export TF_VAR_FILE="-var-file=vars.$1.tfvars"
+            export TF_EXTRA_ARGS="''${@: (($#-1)),2}"
+        else
+            export TF_EXTRA_ARGS="''${@: (($#-1)),1}"
+        fi
+    fi
+    terraform apply ''${TF_VAR_FILE} ''${TF_EXTRA_ARGS}
+    unset TF_WORKSPACE TF_VAR_FILE TF_EXTRA_ARGS
+  }
+
+  function tfd() {
       if [ "$1" != "" ]; then
           ENVIRONMENTS=(local development dev staging stage qa production prod)
-          if [[ ''${ENVIRONMENTS[(r)\$1]} == "$1" ]]; then
+          if [[ ''${ENVIRONMENTS[(r)$1]} == "$1" ]]; then
               export TF_WORKSPACE="$1"
               export TF_VAR_FILE="-var-file=vars.$1.tfvars"
               export TF_EXTRA_ARGS="''${@: (($#-1)),2}"
@@ -51,23 +66,8 @@
               export TF_EXTRA_ARGS="''${@: (($#-1)),1}"
           fi
       fi
-      terraform apply ''${TF_VAR_FILE} ''${TF_EXTRA_ARGS}
+      terraform destroy ''${TF_VAR_FILE} ''${TF_EXTRA_ARGS}
       unset TF_WORKSPACE TF_VAR_FILE TF_EXTRA_ARGS
-    }
-
-    function tfd() {
-        if [ "$1" != "" ]; then
-            ENVIRONMENTS=(local development dev staging stage qa production prod)
-            if [[ ''${ENVIRONMENTS[(r)$1]} == "$1" ]]; then
-                export TF_WORKSPACE="$1"
-                export TF_VAR_FILE="-var-file=vars.$1.tfvars"
-                export TF_EXTRA_ARGS="''${@: (($#-1)),2}"
-            else
-                export TF_EXTRA_ARGS="''${@: (($#-1)),1}"
-            fi
-        fi
-        terraform destroy ''${TF_VAR_FILE} ''${TF_EXTRA_ARGS}
-        unset TF_WORKSPACE TF_VAR_FILE TF_EXTRA_ARGS
-    }
-    '';
+  }
+  '';
 }
