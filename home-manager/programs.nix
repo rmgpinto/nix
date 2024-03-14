@@ -12,7 +12,6 @@
       enable = true;
       plugins = [
         # Personal
-        "zsh-syntax-highlighting"
         "git"
         "direnv"
         "docker"
