@@ -2,7 +2,9 @@
   enable = true;
   settings = {
     font = {
-      family = "FiraCode Nerd Font";
+      normal = {
+        family = "FiraCode Nerd Font";
+      };
     };
   };
 }
