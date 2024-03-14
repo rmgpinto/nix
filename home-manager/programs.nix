@@ -29,6 +29,8 @@
     '' + (import ./aliases.nix).functions;
   };
 
+  starship = import ./starship.nix { inherit pkgs; };
+
   direnv = {
     enable = true;
     enableZshIntegration = true;
