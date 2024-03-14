@@ -203,7 +203,7 @@
   fonts = {
     fontDir.enable = true;
     fonts = with pkgs; [
-      nerdfonts
+      fira-code-nerdfont
     ];
   };
 
