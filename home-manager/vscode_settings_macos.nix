@@ -1,11 +1,12 @@
 let
   colorTheme = "Default Dark Modern";
-  font = "Fira Code";
+  font = "FiraCode Nerd Font";
 in
 {
   "workbench.colorTheme" = colorTheme;
-  "editor.renderWhitespace" = "all";
+  "editor.fontFamily" = font;
   "editor.fontLigatures" = true;
+  "editor.renderWhitespace" = "all";
   "editor.formatOnSave" = true;
   "editor.tabSize" = 2;
   "terminal.integrated.fontFamily" = font;
