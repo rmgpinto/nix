@@ -12,17 +12,21 @@
       enable = true;
       plugins = [
         # Personal
+        "zsh-syntax-highlighting"
         "git"
         "direnv"
+        "docker"
 
         # Work
         "kubectl"
+        "kubectx"
         "helm"
       ];
-      theme = "robbyrussell";
     };
+    syntaxHighlighting.enable = true;
     initExtra = ''
       eval "$(/opt/homebrew/bin/brew shellenv)"
+
     '' + (import ./aliases.nix).functions;
   };
 
