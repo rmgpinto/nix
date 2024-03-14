@@ -1,7 +1,5 @@
 { pkgs, os }: {
-  alacritty = {
-    enable = true;
-  };
+  alacritty = import ./alacritty_${os}.nix { inherit pkgs; };
 
   jq = {
     enable = true;
