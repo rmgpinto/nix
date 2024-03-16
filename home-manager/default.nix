@@ -4,6 +4,7 @@
     osDotfiles = if (lib.pathExists ./dotfiles_${os}.nix) then import ./dotfiles_${os}.nix else {};
     sharedPrograms = import ./programs.nix { inherit pkgs git; };
     osPrograms = if (lib.pathExists ./programs_${os}.nix) then import ./programs_${os}.nix { inherit pkgs os; } else {};
+    sharedPackages = import ./packages.nix { inherit pkgs; };
     osPackages = if (lib.pathExists ./packages_${os}.nix) then import ./packages_${os}.nix { inherit pkgs; } else [];
   in
   {
@@ -20,7 +21,10 @@
           sharedDotfiles
           osDotfiles
         ];
-        packages = osPackages;
+        packages = lib.mkMerge [
+          sharedPackages
+          osPackages
+        ];
       };
       programs = lib.mkMerge [
         sharedPrograms
