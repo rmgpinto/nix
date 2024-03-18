@@ -6,5 +6,6 @@
         family = "FiraCode Nerd Font";
       };
     };
+    colors = (builtins.fromTOML (builtins.readFile ./alacritty_colors.toml));
   };
 }
