@@ -198,8 +198,8 @@
       "/share/zsh"
     ];
     etc."pam.d/sudo_local".text = ''
-      auth       sufficient     pam_tid.so
       auth       optional       ${pkgs.pam-reattach}/lib/pam/pam_reattach.so ignore_ssh
+      auth       sufficient     pam_tid.so
     '';
   };
 
