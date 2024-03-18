@@ -91,9 +91,9 @@
         "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
         "/System/Applications/Mail.app"
         "/Applications/Notion.app"
-        "${pkgs.vscode}/Applications/Visual\ Studio\ Code.app"
-        "${pkgs.alacritty}/Applications/Alacritty.app"
-        "${pkgs.slack}/Applications/Slack.app"
+        "/Applications/Visual\ Studio\ Code.app"
+        "/Applications/Alacritty.app"
+        "/Applications/Slack.app"
         "/System/Applications/Calendar.app"
         "/System/Applications/System\ Settings.app"
       ];
