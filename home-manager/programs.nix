@@ -51,12 +51,7 @@
     '';
   };
 
-  tmux = {
-    enable = true;
-    baseIndex = 1;
-    clock24 = true;
-    mouse = true;
-  };
+  tmux = import ./tmux.nix { inherit pkgs; };
 
   jq = {
     enable = true;
