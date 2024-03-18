@@ -1,10 +1,12 @@
 let
-  colorTheme = "Default Dark Modern";
+  colorTheme = "Catppuccin Mocha";
+  iconTheme = "catppuccin-mocha";
   font = "FiraCode Nerd Font";
 in
 {
   # General
   "workbench.colorTheme" = colorTheme;
+  "workbench.iconTheme" = iconTheme;
   "editor.fontFamily" = font;
   "editor.fontLigatures" = true;
   "editor.renderWhitespace" = "all";
