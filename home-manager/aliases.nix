@@ -40,6 +40,10 @@
   };
 
   functions = ''
+  function tns(){
+    tmux new-session -A -s $1 \; split-window -h \; send-keys "$2" C-m \;
+  }
+
   function tfp() {
     if [ "$1" != "" ]; then
       ENVIRONMENTS=(development dev staging stage qa production prod)
