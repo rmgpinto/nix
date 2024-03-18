@@ -1,5 +1,6 @@
 { pkgs }: {
   enable = true;
+  terminal = "screen-256color";
   baseIndex = 1;
   clock24 = true;
   mouse = true;
