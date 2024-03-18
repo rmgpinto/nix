@@ -1,4 +1,5 @@
 { pkgs }: with pkgs; [
   pam-reattach
-  fswatch
+  _1password
+  terraform
 ]
