@@ -1,4 +1,5 @@
 [
+  "docker"
   "notion"
   "1password"
   "raycast"

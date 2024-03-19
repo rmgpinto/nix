@@ -19,20 +19,20 @@
 
   # Activation scripts
   system.activationScripts.extraActivation.text = ''
-  echo "Disabling Hotkeys..."
-  /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Delete AppleSymbolicHotKeys:64' || true
-  /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Add AppleSymbolicHotKeys:64:enabled bool false' || true
-  /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Delete AppleSymbolicHotKeys:65' || true
-  /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Add AppleSymbolicHotKeys:65:enabled bool false' || true
+    echo "Disabling Hotkeys..."
+    /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Delete AppleSymbolicHotKeys:64' || true
+    /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Add AppleSymbolicHotKeys:64:enabled bool false' || true
+    /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Delete AppleSymbolicHotKeys:65' || true
+    /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Add AppleSymbolicHotKeys:65:enabled bool false' || true
   
-  echo "Creating Screenshots directory..."
-  mkdir -p ${homeDirectory}/Screenshots
+    echo "Creating Screenshots directory..."
+    mkdir -p ${homeDirectory}/Screenshots
 
-  echo "Changing Raycast hotkey..."
-  defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49";
+    echo "Changing Raycast hotkey..."
+    defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49";
 
-  echo "Activating Settings..."
-  /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+    echo "Activating Settings..."
+    /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
   '';
 
   # System Preferences
@@ -143,7 +143,7 @@
     # Show Status bar
     finder.ShowStatusBar = true;
     # Custom settings
-    CustomUserPreferences."com.apple.finder"  = {
+    CustomUserPreferences."com.apple.finder" = {
       FXPreferredGroupBy = "Kind";
       FXArrangeGroupViewBy = "Name";
       ShowExternalHardDrivesOnDesktop = false;

@@ -30,9 +30,9 @@ in
 
   # File associations
   "[terraform]" = {
-      "editor.defaultFormatter" = "hashicorp.terraform";
-      "editor.formatOnSave" = true;
-      "editor.formatOnSaveMode" = "file";
+    "editor.defaultFormatter" = "hashicorp.terraform";
+    "editor.formatOnSave" = true;
+    "editor.formatOnSaveMode" = "file";
   };
   "[terraform-vars]" = {
     "editor.defaultFormatter" = "hashicorp.terraform";
