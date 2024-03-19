@@ -14,7 +14,7 @@ xcode-select --install
 ```bash
 mkdir -p dev/work
 mkdir -p dev/personal && cd $_
-git clone https://github.com/rmgpinto/nix.git
+git clone git@github.com:rmgpinto/nix.git
 cd nix
 ./setup.sh
 ```
