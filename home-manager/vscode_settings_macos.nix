@@ -40,7 +40,7 @@ in
     "editor.formatOnSaveMode" = "file";
   };
   "[nix]" = {
-    "editor.defaultFormatter" = "B4dM4n.nixpkgs-fmt";
+    "editor.defaultFormatter" = "jnoortheen.nix-ide";
     "editor.formatOnSave" = true;
   };
 
