@@ -27,6 +27,12 @@
       version = "2.30.2024022914";
       sha256 = "sha256-HkLMSpI/xgcHTJyZrOPzuTyFwaDXi7f4xKYnI7f/WGU=";
     })
+    (pkgs.vscode-utils.extensionFromVscodeMarketplace {
+      name = "nix-ide";
+      publisher = "jnoortheen";
+      version = "0.3.1";
+      sha256 = "sha256-05oMDHvFM/dTXB6T3rcDK3EiNG2T0tBN9Au9b+Bk7rI=";
+    })
   ];
   userSettings = import ./vscode_settings_${os}.nix;
 }
