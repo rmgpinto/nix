@@ -69,6 +69,9 @@
       "Sound" = 16;
       "BatteryShowPercentage" = 1;
     };
+    CustomUserPreferences."com.apple.TextInputMenu" = {
+      visible = false;
+    };
     CustomUserPreferences."~/Library/Preferences/ByHost/com.apple.Spotlight.plist" = {
       "MenuItemHidden" = 1;
     };

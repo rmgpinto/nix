@@ -27,3 +27,4 @@ op account add --address my.1password.com --signin
 ```
 3. Load `config/raycast.rayconfig` into Raycast
 4. Follow 1Password SSH agent [instructions](https://developer.1password.com/docs/ssh/get-started#step-3-turn-on-the-1password-ssh-agent)
+5. Go to `System Preferences -> Privacy & Security -> Full Disk Access` and add Alacritty and VS Code.
