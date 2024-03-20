@@ -46,6 +46,7 @@
     };
     # Sound
     NSGlobalDomain."com.apple.sound.beep.volume" = 0.606531;
+    CustomUserPreferences.NSGlobalDomain."com.apple.sound.uiaudio.enabled" = false;
     # Appearance
     # Dark Mode
     NSGlobalDomain.AppleInterfaceStyle = "Dark";

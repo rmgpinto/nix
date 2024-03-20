@@ -3,13 +3,14 @@
 This is my personal nix to setup my computer from scratch.
 Instructions are below.
 
-## Install xcode developer tools
+## Install Xcode developer tools and Rosetta
 
 ```bash
 xcode-select --install
+softwareupdate --install-rosetta
 ```
 
-## Clone this repo
+## Clone this repo and run setup
 
 ```bash
 mkdir -p dev/work
