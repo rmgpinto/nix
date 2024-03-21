@@ -15,6 +15,6 @@
     }
   ];
   extraConfig = ''
-    set-option status-position top
+    set -g status-position top
   '';
 }
