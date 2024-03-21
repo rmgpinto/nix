@@ -11,7 +11,7 @@
         set -g @catppuccin_flavour 'mocha'
         set -g @catppuccin_window_tabs_enabled on
         set -g @catppuccin_date_time "%H:%M:%S"
-        set -g status-position top
+        set-option status-position top
       '';
     }
   ];
