@@ -2,6 +2,7 @@
   enable = true;
   enableExtensionUpdateCheck = true;
   mutableExtensionsDir = true;
+  # Sometimes the extensions get corrupted, to fix: rm ~/.vscode/extensions
   extensions = [
     # New extensions can be added using the following template:
     #   name = "<extension-name>";
