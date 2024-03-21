@@ -13,7 +13,6 @@
     rails-dev = "docked bin/dev";
     rails-shell = "docker exec -it $(docker ps | grep rails | awk \"{print \$1}\") bash";
     bundle = "docked bundle";
-    yarn = "docked yarn";
     rake = "docked rake";
     gem = "docked gem";
     credentials-edit = "docked bash -c \"apt-get install -y vim && EDITOR=vim rails credentials:edit\"";
