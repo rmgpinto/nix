@@ -22,6 +22,12 @@
       sha256 = "sha256-6klrnMHAIr+loz7jf7l5EZPLBhgkJODFHL9fzl1MqFI=";
     })
     (pkgs.vscode-utils.extensionFromVscodeMarketplace {
+      name = "vscode-docker";
+      publisher = "ms-azuretools";
+      version = "1.29.0";
+      sha256 = "sha256-mVRsVsolXj31WhbWnt3Xml+NnIq7Q2uHhUUd1zgW42c=";
+    })
+    (pkgs.vscode-utils.extensionFromVscodeMarketplace {
       name = "terraform";
       publisher = "hashicorp";
       version = "2.30.2024022914";
