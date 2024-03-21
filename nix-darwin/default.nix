@@ -181,6 +181,7 @@
       AlwaysShowTabBar = true;
       SearchProviderShortName = "DuckDuckGo";
       "ShowFavoritesBar-v2" = true;
+      ShowFullURLInSmartSearchField = true;
     };
     CustomUserPreferences."com.apple.Safari.SandboxBroker" = {
       ShowDevelopMenu = true;
