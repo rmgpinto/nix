@@ -4,6 +4,7 @@
   baseIndex = 1;
   clock24 = true;
   mouse = true;
+  keyMode = "vi";
   plugins = with pkgs; [
     {
       plugin = tmuxPlugins.catppuccin;
