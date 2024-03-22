@@ -2,7 +2,9 @@
   enable = true;
   enableZshIntegration = true;
   settings = {
-    format = "$all";
+    format = ''
+      $directory$git_branch$git_commit$git_state$git_metrics$git_status$cmd_duration$line_break$character
+    '';
     palette = "catppuccin_mocha";
   } // builtins.fromTOML (builtins.readFile
     (pkgs.fetchFromGitHub
