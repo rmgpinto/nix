@@ -191,6 +191,10 @@
   # Disable startup sound
   system.startup.chime = false;
 
+  # Remap caps lock to control
+  system.keyboard.enableKeyMapping = true;
+  system.keyboard.remapCapsLockToControl = true;
+
   # Touch ID & Password
   security.pam.enableSudoTouchIdAuth = true;
 
