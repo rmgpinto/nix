@@ -1,5 +1,6 @@
 { pkgs }: {
   enable = true;
+  prefix = "C-a";
   terminal = "screen-256color";
   baseIndex = 1;
   clock24 = true;
