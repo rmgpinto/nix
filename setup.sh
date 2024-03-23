@@ -41,4 +41,4 @@ echo "${GREEN}Running nix-darwin..."
 ./result/sw/bin/darwin-rebuild switch --flake .#macos
 echo "${GREEN}Done.\n"
 
-echo "${GREEN}Reboot your machine..."
+echo "${GREEN}Logout to apply configuration."
