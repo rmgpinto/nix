@@ -1,6 +1,7 @@
 {
   shell = {
     # Personal
+    nixgc = "nix-env --delete-generations 14d && nix-store --gc";
     zs = "source ~/.zshrc";
     diff = "diff --color=auto";
     grep = "grep --color=auto";
