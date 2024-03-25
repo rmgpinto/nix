@@ -16,8 +16,7 @@
           shellHook = ''
             export TENV_ROOT=${pkgs.tenv}/bin/versions
             sudo mkdir -p ''${TENV_ROOT}/Terraform
-            USER=$(whoami)
-            sudo chown -R ''${USER}:staff ''${TENV_ROOT}
+            sudo chown -R ''$(whoami):staff ''${TENV_ROOT}
           '';
           buildInputs = with pkgs; [
             tenv
