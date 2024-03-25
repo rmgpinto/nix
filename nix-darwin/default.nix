@@ -99,6 +99,7 @@
         "${pkgs.alacritty}/Applications/Alacritty.app"
         "/Applications/Slack.app"
         "/System/Applications/Calendar.app"
+        "/System/Applications/Reminders.app"
         "/System/Applications/System\ Settings.app"
       ];
     };
