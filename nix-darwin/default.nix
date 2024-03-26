@@ -131,6 +131,8 @@
     NSGlobalDomain.AppleEnableSwipeNavigateWithScrolls = false;
 
     # Finder
+    # Show all files
+    finder.AppleShowAllFiles = true;
     # Show all filename extensions
     NSGlobalDomain.AppleShowAllExtensions = true;
     # Display full POSIX path as Finder window title
@@ -149,8 +151,10 @@
     finder.ShowStatusBar = true;
     # Custom settings
     CustomUserPreferences."com.apple.finder" = {
-      FXPreferredGroupBy = "Kind";
+      FXPreferredGroupBy = "None";
       FXArrangeGroupViewBy = "Name";
+      StandardViewSettings.IconViewSettings.arrangeBy = "kind";
+      StandardViewSettings.IconViewSettings.showItemInfo = true;
       ShowExternalHardDrivesOnDesktop = false;
       ShowHardDrivesOnDesktop = false;
       ShowMountedServersOnDesktop = false;
