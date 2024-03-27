@@ -29,6 +29,9 @@ in
   "terraform.codelens.referenceCount" = true;
   "terraform.languageServer.enable" = true;
 
+  # YAML
+  "redhat.telemetry.enabled" = false;
+
   # File associations
   "[terraform]" = {
     "editor.defaultFormatter" = "hashicorp.terraform";
@@ -43,6 +46,11 @@ in
   "[nix]" = {
     "editor.defaultFormatter" = "jnoortheen.nix-ide";
     "editor.formatOnSave" = true;
+    "editor.formatOnSaveMode" = "file";
   };
-
+  "[yaml]" = {
+    "editor.defaultFormatter" = "redhat.vscode-yaml";
+    "editor.formatOnSave" = true;
+    "editor.formatOnSaveMode" = "file";
+  };
 }
