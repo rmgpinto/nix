@@ -7,6 +7,9 @@
   mouse = true;
   keyMode = "vi";
   aggressiveResize = true;
+  tmuxinator = {
+    enable = true;
+  };
   plugins = with pkgs; [
     {
       plugin = tmuxPlugins.catppuccin;
