@@ -17,6 +17,8 @@
         set -g @catppuccin_flavour 'mocha'
         set -g @catppuccin_window_tabs_enabled on
         set -g @catppuccin_date_time "%H:%M:%S"
+        set -g @catppuccin_window_current_text "#W"
+        set -g @catppuccin_window_default_text "#W"
       '';
     }
   ];
