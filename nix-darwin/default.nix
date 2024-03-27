@@ -19,6 +19,10 @@
 
   # Activation scripts
   system.activationScripts.extraActivation.text = ''
+    echo "Adding nix channel unstable..."
+    nix-channel --add https://nixos.org/channels/nixpkgs-unstable
+    nix-channel --update
+
     echo "Disabling Hotkeys..."
     /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Delete AppleSymbolicHotKeys:64' || true
     /usr/libexec/PlistBuddy ${homeDirectory}/Library/Preferences/com.apple.symbolichotkeys.plist -c 'Add AppleSymbolicHotKeys:64:enabled bool false' || true
