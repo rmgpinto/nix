@@ -22,6 +22,7 @@ in
     "dist" = true;
     "tmp" = true;
   };
+  "extensions.ignoreRecommendations" = true;
 
   # Terraform
   "terraform.experimentalFeatures.prefillRequiredFields" = true;
