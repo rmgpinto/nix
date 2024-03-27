@@ -23,5 +23,7 @@
   extraConfig = ''
     set -g renumber-windows on
     set -g status-position 'top'
+    bind | split-window -h
+    bind - split-window -v
   '';
 }
