@@ -9,17 +9,11 @@
     flushdns = "sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder";
     g = "git";
     tf = "terraform";
-    docked = "docker run --rm -it -v \${PWD}:/rails -v ruby-bundle-cache:/bundle -p 3000:3000 -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/rails/cli";
-    rails = "docked rails";
-    rails-dev = "docked bin/dev";
-    rails-shell = "docker exec -it $(docker ps | grep rails | awk \"{print \$1}\") bash";
-    bundle = "docked bundle";
-    rake = "docked rake";
-    gem = "docked gem";
-    credentials-edit = "docked bash -c \"apt-get install -y vim && EDITOR=vim rails credentials:edit\"";
-    credentials-edit-dev = "docked bash -c \"apt-get install -y vim && EDITOR=vim rails credentials:edit --environment development\"";
-    credentials-edit-test = "docked bash -c \"apt-get install -y vim && EDITOR=vim rails credentials:edit --environment test\"";
-    credentials-edit-prod = "docked bash -c \"apt-get install -y vim && EDITOR=vim rails credentials:edit --environment production\"";
+    r = "rails";
+    credentials-edit = "EDITOR=\"code --wait\" rails credentials:edit";
+    credentials-edit-dev = "EDITOR=\"code --wait\" rails credentials:edit --environment development";
+    credentials-edit-test = "EDITOR=\"code --wait\" rails credentials:edit --environment test";
+    credentials-edit-prod = "EDITOR=\"code --wait\" rails credentials:edit --environment production";
 
     # Work
     tg = "terragrunt";
