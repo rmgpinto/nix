@@ -20,6 +20,7 @@
           ];
           # rails complains about error_highlight version
           shellHook = ''
+            export GEM_HOME=${pkgs.ruby}/gems
             gem install error_highlight -v 0.6.0
           '';
         };
