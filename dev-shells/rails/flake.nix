@@ -23,5 +23,6 @@
             export GEM_PATH="${gemHome}";
           '';
         };
-      });
+      }
+    );
 }

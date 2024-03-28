@@ -22,5 +22,6 @@
             sudo chown -R ''$(whoami):staff ''${TENV_ROOT}
           '';
         };
-      });
+      }
+    );
 }
