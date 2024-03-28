@@ -46,6 +46,25 @@
       version = "1.14.0";
       sha256 = "sha256-hCRyDA6oZF7hJv0YmbNG3S2XPtNbyxX1j3qL1ixOnF8=";
     })
+    (pkgs.vscode-utils.extensionFromVscodeMarketplace {
+      publisher = "shopify";
+      name = "ruby-lsp";
+      version = "0.5.15";
+      sha256 = "sha256-Tr8pWSeq9VFemgKlC6vnXry8LIrPQewDrZvXw30KuKU=";
+    })
+    (pkgs.vscode-utils.extensionFromVscodeMarketplace {
+      publisher = "rubocop";
+      name = "vscode-rubocop";
+      version = "0.7.0";
+      sha256 = "sha256-uP0JEU+eUZ/gMJ5RiILHazYGVu0VsPnkt+NGAeXSd8g=";
+    })
+    (pkgs.vscode-utils.extensionFromVscodeMarketplace {
+      publisher = "koichisasada";
+      name = "vscode-rdbg";
+      version = "0.2.2";
+      sha256 = "sha256-iqUxaMIeqMAyh5EyOiOxraGZZpZUegschMoVjtWz67c=";
+    })
+
   ];
   userSettings = import ./vscode_settings_${os}.nix;
 }

@@ -53,4 +53,9 @@ in
     "editor.formatOnSave" = true;
     "editor.formatOnSaveMode" = "file";
   };
+  "[ruby]" = {
+    "editor.defaultFormatter" = "Shopify.ruby-lsp";
+    "editor.formatOnSave" = true;
+    "editor.formatOnSaveMode" = "file";
+  };
 }
