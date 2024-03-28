@@ -10,6 +10,7 @@
     ".DS_Store"
     ".direnv/"
     ".vscode/"
+    "vendor/bundle"
   ];
   aliases = (import ./aliases.nix).git;
   extraConfig = {
