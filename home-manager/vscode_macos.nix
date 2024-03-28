@@ -49,8 +49,8 @@
     (pkgs.vscode-utils.extensionFromVscodeMarketplace {
       publisher = "shopify";
       name = "ruby-lsp";
-      version = "0.5.15";
-      sha256 = "sha256-Tr8pWSeq9VFemgKlC6vnXry8LIrPQewDrZvXw30KuKU=";
+      version = "0.5.16";
+      sha256 = "sha256-1ZmVzNaI/0LUfqV/4nVNnDrHeUKVMB0g4K7DL4sQXfU=";
     })
     (pkgs.vscode-utils.extensionFromVscodeMarketplace {
       publisher = "rubocop";
