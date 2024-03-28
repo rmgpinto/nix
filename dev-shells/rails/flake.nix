@@ -10,6 +10,7 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
+        gemHome = "$HOME/.gem/ruby/${builtins.baseNameOf ruby}";
       in
       {
         devShells.default = pkgs.mkShell {
@@ -17,6 +18,10 @@
             ruby_3_2
             rubyPackages_3_2.rails
           ];
+          shellHook = ''
+            export GEM_HOME="${gemHome}";
+            export GEM_PATH="${gemHome}";
+          '';
         };
       });
 }

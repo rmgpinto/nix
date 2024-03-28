@@ -13,14 +13,14 @@
       in
       {
         devShells.default = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            tenv
+          ];
           shellHook = ''
             export TENV_ROOT=${pkgs.tenv}/bin/versions
             sudo mkdir -p ''${TENV_ROOT}/Terraform
             sudo chown -R ''$(whoami):staff ''${TENV_ROOT}
           '';
-          buildInputs = with pkgs; [
-            tenv
-          ];
         };
       });
 }
