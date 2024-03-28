@@ -15,13 +15,9 @@
       {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
-            ruby_3_2
-            rubyPackages_3_2.rails
+            ruby
+            rubyPackages.rails
           ];
-          shellHook = ''
-            export GEM_HOME="${gemHome}";
-            export GEM_PATH="${gemHome}";
-          '';
         };
       }
     );
