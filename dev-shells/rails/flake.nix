@@ -14,7 +14,6 @@
       {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
-            libyaml
             ruby_3_2
             rubyPackages_3_2.rails
           ];
