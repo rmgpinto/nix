@@ -21,8 +21,8 @@
           # rails complains about error_highlight version
           shellHook = ''
             export GEM_HOME=${pkgs.ruby}/gems
-            sudo mkdir -p ''${GEM_HOME}/gems
-            sudo chown -R ''$(whoami):staff ''${GEM_HOME}/gems
+            sudo mkdir -p ''${GEM_HOME}
+            sudo chown -R ''$(whoami):staff ''${GEM_HOME}
             gem install error_highlight -v 0.6.0
           '';
         };
