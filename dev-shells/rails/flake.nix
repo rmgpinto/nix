@@ -10,7 +10,7 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        gemHome = "$HOME/.gem/ruby/${builtins.baseNameOf ruby}";
+        gemHome = "$HOME/.gem/ruby/${builtins.baseNameOf pkgs.ruby_3_2}";
       in
       {
         devShells.default = pkgs.mkShell {
