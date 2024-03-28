@@ -3,8 +3,16 @@
   enableZshIntegration = true;
   settings = {
     format = ''
-      $directory$git_branch$git_commit$git_state$git_metrics$git_status$cmd_duration$line_break$character
+      $directory$git_branch$git_commit$git_state$git_metrics$git_status$nix_shell$cmd_duration$line_break$character
     '';
+    nix_shell = {
+      disabled = false;
+      symbol = "❄️ ";
+      impure_msg = "";
+      pure_msg = "";
+      unknown_msg = "";
+      format = "via [$symbol$state]($style)";
+    };
     palette = "catppuccin_mocha";
   } // builtins.fromTOML (builtins.readFile
     (pkgs.fetchFromGitHub
